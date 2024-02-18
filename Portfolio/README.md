@@ -1,8 +1,47 @@
-# React + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my portfolio! This is a showcase of my projects, skills, and experience.
 
-Currently, two official plugins are available:
+## Projects
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Project 1
+
+- Description: [Brief description of project 1]
+- Technologies used: [List of technologies used]
+- Demo: [Link to live demo or repository]
+
+### Project 2
+
+- Description: [Brief description of project 2]
+- Technologies used: [List of technologies used]
+- Demo: [Link to live demo or repository]
+
+## Skills
+
+- Skill 1
+- Skill 2
+- Skill 3
+
+## Experience
+
+### Company 1
+
+- Position: [Your position]
+- Duration: [Start date - End date]
+- Description: [Brief description of your role and responsibilities]
+
+### Company 2
+
+- Position: [Your position]
+- Duration: [Start date - End date]
+- Description: [Brief description of your role and responsibilities]
+
+## Education
+
+- Degree: [Your degree]
+- Institution: [Name of institution]
+- Year: [Year of graduation]
+
+## Contact
+
+Feel free to reach out to me at [your email address] or connect with me on [LinkedIn](www.linkedin.com/in/bruceniyibitanga).
