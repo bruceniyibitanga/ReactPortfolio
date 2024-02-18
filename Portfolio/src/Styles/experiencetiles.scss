@@ -1,0 +1,47 @@
+@import 'globals.scss';
+
+.tile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15rem;
+    color: $primary-light;
+    background-color: rgba(#13131d, 30%);
+    background: linear-gradient(180deg,
+        rgba(35, 37, 49, 0.5),
+        rgba(15, 15, 24, 0.5));
+    border-radius: 1.5rem;
+    padding: 3rem;
+    -webkit-box-shadow: 5px -4px 13px 5px rgba(0, 0, 0, 0.18);
+    box-shadow: 5px -4px 13px 5px rgba(0, 0, 0, 0.18);
+    
+    @media screen and (min-width: 50em){
+        width: 20rem;
+        height: 15rem;
+    }
+        .tile-icon {
+            width: 3rem;
+            brightness: (102%) contrast(102%);
+            filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg);
+
+            @media screen and (min-width: 50em) {
+                width: 4.5rem;
+            }
+        }
+    
+        .tile-heading {
+            font-weight: bold;
+            @media screen and (min-width: 50em) {
+                font-size: 1.2rem;
+                margin-top: 0.5rem;
+            }
+        }
+
+        p{
+            text-align: center;
+            font-size: 0.8rem;
+            @media screen  and (min-width: 50em) {
+                font-size: 1.1rem;
+            }
+        }
+}

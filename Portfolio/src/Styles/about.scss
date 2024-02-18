@@ -1,0 +1,15 @@
+@import 'globals.scss';
+
+.experience-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    margin-top: 1rem;
+
+    @media screen and (min-width: 50em) {
+        margin-top: 3rem;
+    }
+}
