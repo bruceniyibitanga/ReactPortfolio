@@ -10,16 +10,18 @@
     background: rgb(16, 16, 26);
     background: linear-gradient(-40deg, rgba(16, 16, 26, 0.3) 0%, rgba(81, 55, 185, 0.5) 100%);
     z-index: -1;
-
-    &.flip{
-        top: 15rem;
-        left: auto;
-        right: -15rem;
-        float: right;
-        opacity: 0.05;
-        background: linear-gradient(-40deg, rgba(16, 16, 26, 0.3) 0%, rgba(81, 55, 185, 0.5) 100%);
-    }
 }
+
+// @media screen and (max-width: 30em) {
+//     .circle .flip {
+//         top: 15rem;
+//         left: auto;
+//         right: -15rem;
+//         float: right;
+//         opacity: 1;
+//         background: linear-gradient(-40deg, rgba(16, 16, 26, 0.3) 0%, rgba(81, 55, 185, 0.5) 100%);
+//     }
+// }
 
 @media screen and (min-width: 50em){
     .circle {
