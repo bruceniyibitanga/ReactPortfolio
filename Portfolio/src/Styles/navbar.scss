@@ -12,6 +12,7 @@
         backdrop-filter: blur(104px);
         background: rgba(42, 43, 56, 0.5);
         padding: 1.5rem 3rem;
+        border-radius: 1rem;
         z-index: 9999;
     
         .navbar-container{
@@ -35,13 +36,14 @@
             justify-content: center;
             gap: 1rem;
             align-items: center;
-
+            border-radius: 1rem;
             .nav-item{
                 .nav-links{
                     color: $primary-light;
                     font-size: 1.5rem;
                     &:hover{
                         color: pink;
+                        cursor: pointer;
                     }
                 }
             }
@@ -81,7 +83,7 @@
 
     .navbar{
         position: fixed;
-        width: 90%;
+        width: 70%;
         top: 0;
         left: 50%;
         transform: translate(-50%, 50%);
@@ -119,58 +121,15 @@
                     &:hover{
                         color: pink;
                     }
+
+                    &.active{
+                        color: pink;
+                    }
                 }
             }
         }
-
         .menu {
             display: none;
         }
     }
 }
-// .navbar {
-//     position: fixed;
-//     width: 100%;
-//     top: 0;
-//     left: 0;
-//     -webkit-backdrop-filter: blur(104px);
-//     backdrop-filter: blur(104px);
-//     background: rgba(42, 43, 56, 0.5);
-//     padding: 0 3rem;
-//     z-index: 9999;
-
-//     .navbar-container {
-//         display: flex;
-//         justify-content: space-between;
-//         align-items: center;
-//     }
-
-//     .navbar-logo {
-//         img {
-
-//             width: 2rem;
-//             transition: all 0.3s ease-in-out;
-
-//             &:hover {
-//                 transform: scale(1.05);
-//             }
-//         }
-//     }
-
-//     .nav-menu {
-//         display: flex;
-//         justify-content: space-evenly;
-//         gap: 1rem;
-//         align-items: center;
-
-//         .nav-item {
-//             .nav-links {
-//                 color: $primary-light;
-
-//                 &:hover {
-//                     color: pink;
-//                 }
-//             }
-//         }
-//     }
-// }

@@ -13,7 +13,7 @@ $off-white: #CFC9C9;
     position: relative;
     background-color: $bg-light;
     margin-bottom: 10rem;
-    padding: 2.5rem 0.8rem;
+    padding: 2.5rem;
     border-radius: 1.5rem;
 
     display: flex;
@@ -73,6 +73,9 @@ $off-white: #CFC9C9;
             color: $primary-light;
             font-size: 0.8rem;
             font-weight: bold;
+            border-radius: 0.4rem;
+            border: 3px solid $green;
+            transition: all 0.3s ease;
 
             @media screen and (min-width: 50em) {
                 font-size: 1.2rem;
@@ -81,14 +84,22 @@ $off-white: #CFC9C9;
 
         a:first-child {
             padding: 0.2rem 1rem;
-            border: 1px solid $green;
             color: $green;
+
+            &:hover {
+                background-color: $green;
+                color: $primary-light;
+            }
         }
 
         a:last-child {
             background-color: $green;
-            border: 1px solid $green;
             padding: 0.2rem 1rem;
+
+            &:hover {
+                background-color: transparent;
+                color: $green;
+            }
         }
     }
 }
@@ -115,13 +126,23 @@ $off-white: #CFC9C9;
         & .project-btns:nth-child(3) {
             a:first-child {
                 color: $off-white;
-                border: 1px solid $off-white;
+                border: 3px solid $off-white;
+
+                &:hover {
+                    background-color: $off-white;
+                    color: $bg-dark;
+                }
             }
 
             a:last-child {
                 color: $bg-dark;
-                border: 1px solid $off-white;
+                border: 3px solid $off-white;
                 background-color: $off-white;
+
+                &:hover {
+                    background-color: $bg-dark;
+                    color: $off-white;
+                }
             }
         }
     }

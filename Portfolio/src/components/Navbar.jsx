@@ -1,4 +1,5 @@
 import { React, useState } from "react";
+import { Link } from "react-scroll";
 import {RiMenu3Line} from "@remixicon/react";
 import Logo from "../assets/logo.svg";
 
@@ -9,22 +10,50 @@ function Navbar() {
     return (
         <nav className="navbar">
             <div className="navbar-container">
-                <a href="#" className="navbar-logo">
+                <Link to="home" className="navbar-logo">
                     <img src={Logo} alt="logo" />
-                </a>
+                </Link>
                 <ul className={`nav-menu ${menu ? 'show' : 'hide'}`}>
-                    <li className="nav-item">
-                        <a href="#" className="nav-links">Home</a>
-                    </li>
-                    <li className="nav-item">
-                        <a href="#" className="nav-links">About</a>
-                    </li>
-                    <li className="nav-item">
-                        <a href="#" className="nav-links">Projects</a>
-                    </li>
-                    <li className="nav-item">
-                        <a href="#" className="nav-links">Contact</a>
-                    </li>
+                <li className="nav-item">
+                    <Link
+                    to="home"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    className="nav-links"
+                    activeClass="active"
+                    onClick={() => setMenu(false)}
+                    >
+                    Home
+                    </Link>
+                </li>
+                <li className="nav-item">
+                    <Link
+                    to="about"
+                    spy={true}
+                    smooth={true}
+                    offset={-110}
+                    duration={500}
+                    className="nav-links"
+                    onClick={() => setMenu(false)}
+                    >
+                    About
+                    </Link>
+                </li>
+                <li className="nav-item">
+                    <Link
+                    to="projects"
+                    spy={true}
+                    smooth={true}
+                    offset={-110}
+                    duration={500}
+                    className="nav-links"
+                    onClick={() => setMenu(false)}
+                    >
+                    Projects
+                    </Link>
+                </li>
                 </ul>
                 <div className="menu" onClick={() => setMenu(!menu)}>
                     <RiMenu3Line className="menu-icon" size={28} />

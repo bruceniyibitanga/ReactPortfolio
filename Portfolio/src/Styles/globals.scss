@@ -623,11 +623,13 @@ input {
 
 .wrapper {
     padding: 0 3em;
+    max-width: 77.5em;
+    margin: 0 auto;
     @media screen and (min-width:50em) {
-        padding: 0 8em;
+        padding: 0 8rem;
     }
     @media screen and (min-width:80em) {
-        padding: 0 15em;
+        padding: 0;
     }
 }
 
