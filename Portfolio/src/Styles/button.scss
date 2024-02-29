@@ -1,0 +1,19 @@
+@import 'globals.scss';
+
+button{
+    // Dark minimal button
+    background-color: transparent;
+    color: navy;
+    border: 1px solid navy;
+    border-radius: 0.8rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    max-width: fit-content;
+    &:hover{
+        background-color: $secondary-light;
+        color: $secondary-dark;
+
+    }
+}
