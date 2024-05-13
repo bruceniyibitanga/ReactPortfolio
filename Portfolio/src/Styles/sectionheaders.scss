@@ -1,17 +1,15 @@
 @import 'globals.scss';
 
 .text-container{
-    color: $primary-light;
+    color: $primary-dark;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    text-align: center;
     margin-bottom: 3rem;
     h3{
-        color: $secondary-dark;
+        font-family: ClashDisplay-Bold;
         text-transform: uppercase;
-        font-size: clamp(1rem,5vw, 1.8rem);
+        font-size: clamp(2rem,5vw, 1.8rem);
     }
 
     h2{
@@ -23,7 +21,6 @@
         font-size: clamp(0.5rem, 3vw, 1rem);
         @media screen and (min-width: 40em){
             width: 50%;
-            
         }
     }
 }

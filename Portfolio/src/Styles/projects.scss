@@ -1,148 +1,130 @@
 @import 'globals.scss';
+.projects-container{
+    position: relative ;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    @media screen and (min-width: 50em) {
+        flex-direction: row;
+    }
 
-$green:#22452B;
-$bg-light: #878A81;
-$bg-dark: #232A32;
-$off-white: #CFC9C9;
+    //  Colored circles behind project cards
+    .colored-circles-container{
+        position: absolute;
+        top: 25rem;
+        right: 1rem;
+        .colored-circle{
+            width: 10rem;
+            height: 10rem;
+            border-radius: 50%;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
 
-.projects-section-container{
-    margin-top: 6rem;
+        .blue-circle{
+            position: relative;
+            background-color: #8BBBD9;
+        }
+
+        .red-circle{
+            position: absolute;
+            top: 0;
+            left: 2.5rem;
+            background-color: #E8AB8E;
+        }
+
+        .yellow-circle{
+            position: absolute;
+            top: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #F8F19C;
+        }
+
+    }
 }
 
 .project-card{
-    position: relative;
-    background-color: $bg-light;
-    margin-bottom: 10rem;
-    padding: 2.5rem;
-    border-radius: 1.5rem;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-
-    @media screen and (min-width: 50em) {
-        width: 50rem;
-    }
-    
-    .project-image{
-        position: absolute;
-        width: 9rem;
-        top: -7rem;
-        left: -1rem;
-        @media screen and (mx-width:20em) {
-            width: 5rem;
+    // Second Project Card
+    &:nth-child(3){
+        .project-card{
+            position: relative;
         }
-
-        @media  screen and (min-width: 65em) {
-            width: 15rem;
-            left: -4rem;
-        }
-    }
-
-    .project-info-container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: right;
-        color: $primary-light;
-        
-        @media screen and (min-width: 50em) {
-            width: 35rem;
-        }
-        .project-info{
-            h4{
-                font-size: clamp(1.2rem, 5vw, 2rem);
-                margin-bottom: 0.7rem;
-            }
-            p{
-                font-size: clamp(0.5rem, 3vw, 1rem);
-            }
-        }
-    }
-
-    .project-btns {
-        margin-top: 1.5rem;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: flex-end;
-        gap: 1rem;
-        a {
-            color: $primary-light;
-            font-size: 0.8rem;
-            font-weight: bold;
-            border-radius: 0.4rem;
-            border: 3px solid $green;
-            transition: all 0.3s ease;
-
-            @media screen and (min-width: 50em) {
-                font-size: 1.2rem;
+        .project-image{
+            img{
+                height: 70vh;
             }
         }
 
-        a:first-child {
-            padding: 0.2rem 1rem;
-            color: $green;
+        .project-info-container{
+            position: absolute;
+            top: 0;
+            right: 0;
+            text-align: right;
 
-            &:hover {
-                background-color: $green;
+            .project-info{
                 color: $primary-light;
             }
         }
 
-        a:last-child {
-            background-color: $green;
-            padding: 0.2rem 1rem;
+        .project-btns{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
 
-            &:hover {
-                background-color: transparent;
-                color: $green;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    .project-image{
+        img{
+            width: 100%;
+            height: 20rem;
+            border-radius: 1rem;
+            object-fit: cover;
+        }
+    }
+
+    .project-info-container{
+        padding: 1.5rem;
+        .project-info{
+            h4{
+                font-family: ClashDisplay-Semibold;
+                font-size: 1.2rem;
+                text-transform: uppercase;
+            }
+            p{
+                font-family: "Poppins", sans-serif;
+                font-weight: 400;
+                font-size: 0.9rem;
+                margin-top: 0.5rem
             }
         }
     }
-}
 
-.project-container {
-    margin-top: 10rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    .project-btns{
+        padding: 1.5rem;
+        display: flex;
+        gap: 0.3rem;
 
-    & .project-card:nth-child(2) {
-        background-color: $bg-dark;
-        align-items: flex-start;
-
-        .project-image {
-            left: auto;
-            right: -1rem;
+        .project-btn-link{
+            font-size: 0.9rem;
         }
 
-        .project-info-container {
-            text-align: left;
+        .github-link{
+            background-color: transparent;
+            border: 2px solid $secondary-dark;
         }
 
-        & .project-btns:nth-child(3) {
-            a:first-child {
-                color: $off-white;
-                border: 3px solid $off-white;
-
-                &:hover {
-                    background-color: $off-white;
-                    color: $bg-dark;
-                }
-            }
-
-            a:last-child {
-                color: $bg-dark;
-                border: 3px solid $off-white;
-                background-color: $off-white;
-
-                &:hover {
-                    background-color: $bg-dark;
-                    color: $off-white;
-                }
+        .website-link{
+            border: 2px solid $secondary-dark;
+            &:hover{
+                border: 2px solid $secondary-green;
             }
         }
     }
