@@ -7,12 +7,16 @@ import "./Styles/sectionheaders.scss";
 import "./Styles/experiencetiles.scss";
 import "./Styles/about.scss";
 import "./Styles/projects.scss";
+import "./Styles/contactform.scss";
+import "./Styles/footer.scss";
 
 import { Element } from "react-scroll";
 import Navbar from "./components/Navbar";
 import Landing from "./pages/Landing";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
+import ContactForm from "./components/ContactForm";
+import Footer from "./components/Footer";
 
 const image1 = "/img/profile.webp";
 const image2 = "/img/wilson-prom2.webp";
@@ -43,6 +47,15 @@ function App() {
 
       <Element name="projects">
         <Projects />
+      </Element>
+
+      <Element name="contact">
+        <ContactForm />
+      </Element>
+
+      {/* <Footer /> */}
+      <Element name="footer">
+        <Footer />
       </Element>
     </>
   );

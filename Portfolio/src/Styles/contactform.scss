@@ -1,0 +1,113 @@
+@import 'globals.scss';
+:root {
+    --contact-color1: 255, 0, 0;
+    --contact-color2: 0, 255, 0;
+    --contact-color3: 0, 0, 255;
+    --contact-color4: 255, 255, 0;
+    --contact-color5: 255, 0, 255;
+  --circle-size: 80%;
+  --blending: linear-dodge;
+}
+
+.contact-section{
+    position: relative;
+    margin-top: 3rem;
+
+    //  Colored circles behind project cards
+    .colored-circles-container{
+        position: absolute;
+        top: -20rem;
+        left: -25rem;
+        z-index: -999;
+        .colored-circle{
+            width: 40rem;
+            height: 40rem;
+            border-radius: 50%;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+
+        .blue-circle{
+            position: relative;
+            background: radial-gradient(circle at center, rgba(var(--contact-color1), 0.8) 0, rgba(var(--contact-color2), 0) 50%) no-repeat;
+            mix-blend-mode: var(--blending);
+        }
+
+        .red-circle{
+            position: absolute;
+            top: 0;
+            left: 2.5rem;
+            background: radial-gradient(circle at center, rgba(var(--contact-color2), 0.8) 0, rgba(var(--contact-color3), 0) 50%) no-repeat;
+            mix-blend-mode: var(--blending);
+        }
+
+        .yellow-circle{
+            position: absolute;
+            top: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: radial-gradient(circle at center, rgba(var(--contact-color3), 0.8) 0, rgba(var(--contact-color4), 0) 50%) no-repeat;
+            mix-blend-mode: var(--blending);
+
+        }
+
+    }
+}
+
+
+
+.contact-form-container{
+    width: 100%;
+    position: relative;
+    // Glassmorphism effect
+    background: rgb(255, 255, 255, 0.5);
+    backdrop-filter: blur(2rem);
+    border-radius: 1rem;
+    border: 1px solid white;
+    padding: 1rem;
+
+    .form-container{
+        .form-text-container{
+            h3{
+                font-family: ClashDisplay-Medium;
+                font-size: 2.2rem;
+            }
+
+            p{
+                font-family: ClashDisplay-Regular;
+                font-size: 1rem;
+                margin-top: -0.5rem;
+            }
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        form > input, textarea{
+            width: 100%;
+            background: none;
+            border: 1px solid $primary-light;
+            font-family: ClashDisplay-Regular, sans-serif;
+            font-size: 1rem;
+            padding: 0.8rem 1.2rem;
+            border-radius: 0.8rem;
+            transition: all 0.3s ease-in-out;
+
+            &:focus{
+                outline: none;
+                border: 1px solid $secondary-green;
+            }
+        }
+
+        form > button{
+            width: 100%;
+            background-color: $secondary-green;
+            color: $primary-dark;
+            text-align: center;
+        }
+    }
+}

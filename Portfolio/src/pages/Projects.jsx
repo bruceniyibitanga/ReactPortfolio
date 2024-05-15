@@ -37,7 +37,7 @@ function Projects() {
             title="Gautex Bakery"
             description="E-commerce website for a cake cafe"
             // github="https://github.com/bruceniyibitanga/Botani"
-            website="test"
+            website=""
           />
 
           <ProjectCard

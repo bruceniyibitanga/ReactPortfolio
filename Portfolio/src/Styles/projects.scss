@@ -1,4 +1,15 @@
 @import 'globals.scss';
+
+:root {
+  --color1: 18, 113, 255;
+  --color2: 221, 74, 255;
+  --color3: 100, 220, 255;
+  --color4: 200, 50, 50;
+  --color5: 180, 180, 50;
+  --circle-size: 80%;
+  --blending: linear-dodge;
+}
+
 .projects-container{
     position: relative ;
     display: flex;
@@ -12,10 +23,10 @@
     .colored-circles-container{
         position: absolute;
         top: 25rem;
-        right: 1rem;
+        right: -4rem;
         .colored-circle{
-            width: 10rem;
-            height: 10rem;
+            width: 20rem;
+            height: 20rem;
             border-radius: 50%;
             backdrop-filter: blur(5px);
             -webkit-backdrop-filter: blur(5px);
@@ -23,14 +34,16 @@
 
         .blue-circle{
             position: relative;
-            background-color: #8BBBD9;
+            background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
+            mix-blend-mode: var(--blending);
         }
 
         .red-circle{
             position: absolute;
             top: 0;
             left: 2.5rem;
-            background-color: #E8AB8E;
+            background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
+            mix-blend-mode: var(--blending);
         }
 
         .yellow-circle{
@@ -38,14 +51,16 @@
             top: 3rem;
             left: 50%;
             transform: translateX(-50%);
-            background-color: #F8F19C;
+            background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
+            mix-blend-mode: var(--blending);
+
         }
 
     }
 }
 
 .project-card{
-    // Second Project Card
+    // SECOND PROJECT CARD
     &:nth-child(3){
         .project-card{
             position: relative;
@@ -74,12 +89,12 @@
         }
     }
 
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.427);
+    border-radius: 16px;    
+    box-shadow: 0 4px 30px rgba(112, 112, 112, 0.1);
+    backdrop-filter: blur(2rem);
+    -webkit-backdrop-filter: blur(2rem);
+    border: 1px solid white;
 
     .project-image{
         img{

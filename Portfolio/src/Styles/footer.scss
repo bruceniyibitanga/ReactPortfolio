@@ -1,0 +1,130 @@
+@import 'globals.scss';
+
+.footer {
+    margin-top: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    background: rgb(0, 0, 0);
+    backdrop-filter: blur(5rem);
+    
+    color: $primary-light;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    position: relative;
+
+    //  Colored circles behind project cards
+    .colored-circles-container{
+        position: absolute;
+        top: -5rem;
+        right: -4rem;
+        z-index: -9999;
+        .colored-circle{
+            width: 15rem;
+            height: 15rem;
+            border-radius: 50%;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            opacity: 0.3;
+        }
+
+        .blue-circle{
+            position: relative;
+            background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
+            mix-blend-mode: var(--blending);
+        }
+
+        .red-circle{
+            position: absolute;
+            top: 0;
+            left: 2.5rem;
+            background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
+            mix-blend-mode: var(--blending);
+        }
+
+        .yellow-circle{
+            position: absolute;
+            top: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
+            mix-blend-mode: var(--blending);
+        }
+    }
+
+    .footer-container{
+        // All rights reserved text
+        &:last-child{
+            text-align: center;
+            font-size: 0.8rem;
+            margin-bottom: 3rem;
+        }
+        .footer-content-container{
+            .footer-text{
+                margin-top: 3rem;
+                font-family: ClashDisplay-Medium;
+                font-size: 2rem;
+                line-height: 2rem;
+                text-align: left;
+            }
+            form{
+                position: relative;
+                margin-top: 2rem;
+            }
+            form > input{
+                    
+                    width: 100%;
+                    padding: 1rem;
+                    margin: 1rem 0rem;
+                    border: none;
+                    border-radius: 0.5rem;
+                    background: rgba(255, 255, 255, 0.171);
+                    backdrop-filter: blur(2rem);
+                    color: $primary-light;
+                    font-family: ClashDisplay-Regular;
+                    font-size: 1rem;
+                    &::placeholder{
+                        color: $primary-light;
+                }
+            }
+
+            form > button{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                padding: 1rem;
+                margin: 1rem 0rem;
+                border: none;
+                border-radius: 0.5rem;
+                background: $secondary-purple;
+                color: $primary-light;
+                font-family: ClashDisplay-Regular;
+                font-size: 1rem;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                &:hover{
+                    background: $secondary-green;
+                }
+            }
+        }
+        .footer-link-container{
+            margin: 2rem 0rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            a{
+                font-family: ClashDisplay-Regular, serif;
+                font-size: 0.9rem;
+                color: $secondary-purple    ;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                &:hover{
+                    color: $secondary-green;
+                }
+            }
+        }
+    }
+}
