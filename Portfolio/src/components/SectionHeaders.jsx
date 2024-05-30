@@ -4,8 +4,8 @@ function SectionHeaders(props) {
     return (
       <>
         <div className="text-container">
-          <h3>{props.section}</h3>
-          <h2>{props.subheading}</h2>
+          <h2>{props.section}</h2>
+          {/* <h2>{props.subheading}</h2> */}
           <p>{props.paragraph}</p>
         </div>
       </>

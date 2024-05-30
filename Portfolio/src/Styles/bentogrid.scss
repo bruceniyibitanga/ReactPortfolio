@@ -1,0 +1,68 @@
+@import 'globals.scss';
+
+.bento-grid-section{
+  padding: 0 2rem;
+}
+
+.bento-grid-container { 
+  display: grid;
+  gap: 1.5rem;
+  a{
+    cursor: pointer;
+    .bento-grid-item {
+      position: relative;
+      height: 60rem;
+      transition: all 0.3s ease-in-out;
+      will-change: transform;
+      img, video{
+        transition: all 0.3s ease-in-out;
+        will-change: transform;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 1rem;
+      }
+    }
+    .item-title{
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      z-index: 99;
+      font-family: ClashDisplay-Medium, sans-serif;
+      font-size: 1.2rem;
+      color: $primary-light;
+
+      background-color: rgba($color: $primary-dark, $alpha: 0.3);
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+    }
+  }
+  @media screen and (max-width: 59em) {
+      grid-template-columns: repeat(1, 1fr) !important;
+    }
+      
+    @media screen and (min-width: 60em) {
+      a:nth-child(1){
+        grid-column: span 2 !important;
+      }
+      a:nth-child(4){
+        grid-column: span 2 !important;
+      }
+  
+      & > div {
+      position: relative;
+      height: 120vh;
+    }
+  }
+}
+
+// CALL OUT ANIMATION
+.bento-grid-container.callout-container{
+  .callout-item{
+    & > * {
+    }
+  }
+  .item-title{
+    display: none;
+  }
+}

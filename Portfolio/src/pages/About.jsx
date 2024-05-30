@@ -2,10 +2,12 @@ import React from "react";
 
 import SectionHeaders from "../components/SectionHeaders";
 import ExperienceTiles from "../components/ExperienceTiles";
+import Navbar from "../components/Navbar";
 
 function About() {
   return (
     <>
+      <Navbar />
       <SectionHeaders
         section="About me"
         subheading="What am I good at"

@@ -1,23 +1,25 @@
 @import 'globals.scss';
 :root {
-    --contact-color1: 255, 0, 0;
-    --contact-color2: 0, 255, 0;
-    --contact-color3: 0, 0, 255;
-    --contact-color4: 255, 255, 0;
-    --contact-color5: 255, 0, 255;
+    --contact-color1: 18, 113, 255;
+    --contact-color2: 221, 74, 255;
+    --contact-color3: 100, 220, 255;
+    --contact-color4: 200, 50, 50;
+    --contact-color5: 180, 180, 50;
   --circle-size: 80%;
   --blending: linear-dodge;
 }
 
+
 .contact-section{
     position: relative;
     margin-top: 3rem;
+    padding: 2rem;
 
     //  Colored circles behind project cards
     .colored-circles-container{
         position: absolute;
         top: -20rem;
-        left: -25rem;
+        left: -20rem;
         z-index: -999;
         .colored-circle{
             width: 40rem;
@@ -70,12 +72,12 @@
         .form-text-container{
             h3{
                 font-family: ClashDisplay-Medium;
-                font-size: 2.2rem;
+                font-size: clamp(2.2rem, 5vw, 3rem);
             }
 
             p{
                 font-family: ClashDisplay-Regular;
-                font-size: 1rem;
+                font-size: clamp(1rem, 5vw, 1.1rem);
                 margin-top: -0.5rem;
             }
         }

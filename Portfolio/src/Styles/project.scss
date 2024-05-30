@@ -1,0 +1,51 @@
+@import 'globals.scss';
+
+.project-wrapper{
+    padding: 0 2rem;
+    .project-header-container{
+        position: relative;
+        height: 20em;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 2rem;
+        }
+
+        .project-header-text-container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: $primary-light;
+            font-size: 1.5rem;
+            text-align: center;
+            & > * {
+                font-family: ClashDisplay-Medium, sans-serif;
+            }
+
+            h2{
+                text-transform: uppercase;
+            }
+        }
+    }
+    .project-information-container{
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        & > *{
+            font-family: ClashDisplay-Regular, sans-serif;
+        }
+        em{
+            font-size: 1.2rem;
+            color: $primary-dark;
+            font-style: normal;
+            font-weight: bold;
+        }
+    }
+
+    .bento-grid-section{
+        margin-top: 2rem
+    }
+}

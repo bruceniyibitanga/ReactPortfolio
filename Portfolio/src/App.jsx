@@ -1,23 +1,32 @@
+import { useEffect, useState, useRef } from "react";
+import ReactLenis from "lenis/react";
 
-import './Styles/globals.scss'
+import "./Styles/globals.scss";
 import "./Styles/clash-display.scss";
 import "./Styles/navbar.scss";
 import "./Styles/landing.scss";
 import "./Styles/sectionheaders.scss";
 import "./Styles/experiencetiles.scss";
 import "./Styles/about.scss";
-import "./Styles/projects.scss";
+import "./Styles/project.scss";
 import "./Styles/contactform.scss";
 import "./Styles/footer.scss";
+import "./Styles/modal.scss";
+import "./Styles/bentogrid.scss";
 
 import { Element } from "react-scroll";
 import Navbar from "./components/Navbar";
-import Landing from "./pages/Landing";
+import Home from "./pages/Home";
 import About from "./pages/About";
-import Projects from "./pages/Projects";
+import Projects from "./pages/ProjectList";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
+import Modal from "./components/Modal";
+import { useLenis } from "lenis/react";
+import BentoGrid from "./components/BentoGrid";
+import SectionHeaders from "./components/SectionHeaders";
 
+// LANDING PAGE SLIDE SHOW IMAGES
 const image1 = "/img/profile.webp";
 const image2 = "/img/wilson-prom2.webp";
 const image3 = "/img/garden.webp";
@@ -33,32 +42,55 @@ let images = [
   { url: image4, alt: "Image of Bruce in road taking a photo" },
 ];
 
+// VIDEO IMPORTS
+import GauteauxVideo from "./assets/videos/gateaux.mp4";
+import SamsWarehouseVideo from "./assets/videos/sams-warehouse.mp4";
+
+const gridItems = [
+  {
+    showLabel: true,
+    label: "NDIS Provider Website",
+    src: "/img/ndis.jpeg",
+    alt: "Image of a support worker with elderly client",
+  },
+  {
+    showLabel: true,
+    label: "Botani",
+    src: "/img/botani-landing.jpg",
+    alt: "Image of Plant",
+    isVideo: false,
+  },
+
+  {
+    showLabel: true,
+    label: "Sams Warehouse",
+    src: SamsWarehouseVideo,
+    alt: "Image of little boy holding vegetables",
+    isVideo: true,
+  },
+];
+
 function App() {
   return (
     <>
-      <Navbar />
-      <Element name="home">
-        <Landing images={images} />
-      </Element>
+      <ReactLenis root>
+        <Navbar />
+        <Home images={images} />
 
-      {/* <Element name="about">
-        <About />
-      </Element> */}
+        <BentoGrid x={2} y={2} gridItems={gridItems} />
 
-      <Element name="projects">
-        <Projects />
-      </Element>
+        <Element name="contact">
+          <ContactForm />
+        </Element>
 
-      <Element name="contact">
-        <ContactForm />
-      </Element>
+        {/* {createPortal(<Modal />, document.body)} */}
 
-      {/* <Footer /> */}
-      <Element name="footer">
-        <Footer />
-      </Element>
+        <Element name="footer">
+          <Footer />
+        </Element>
+      </ReactLenis>
     </>
   );
 }
 
-export default App
+export default App;
