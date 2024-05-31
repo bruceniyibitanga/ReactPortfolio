@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { Element } from "react-scroll";
 import ReactLenis from "lenis/react";
 
 import "./Styles/globals.scss";
@@ -14,17 +14,11 @@ import "./Styles/footer.scss";
 import "./Styles/modal.scss";
 import "./Styles/bentogrid.scss";
 
-import { Element } from "react-scroll";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import About from "./pages/About";
-import Projects from "./pages/ProjectList";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
-import Modal from "./components/Modal";
-import { useLenis } from "lenis/react";
 import BentoGrid from "./components/BentoGrid";
-import SectionHeaders from "./components/SectionHeaders";
 
 // LANDING PAGE SLIDE SHOW IMAGES
 const image1 = "/img/profile.webp";
@@ -60,13 +54,19 @@ const gridItems = [
     alt: "Image of Plant",
     isVideo: false,
   },
-
   {
     showLabel: true,
     label: "Sams Warehouse",
-    src: SamsWarehouseVideo,
+    src: "/img/wilson-prom2.webp",
     alt: "Image of little boy holding vegetables",
-    isVideo: true,
+    isVideo: false,
+  },
+  {
+    showLabel: true,
+    label: "Sams Warehouse",
+    src: "/img/garden.webp",
+    alt: "Image of little boy holding vegetables",
+    isVideo: false,
   },
 ];
 

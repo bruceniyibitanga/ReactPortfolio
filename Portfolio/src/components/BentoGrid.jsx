@@ -1,6 +1,8 @@
 import { React, useRef, useState, useEffect } from "react";
 import SectionHeaders from "../components/SectionHeaders";
 import { Link } from "react-router-dom";
+import { Parallax } from "react-parallax";
+import { RiArrowRightLine } from "@remixicon/react";
 
 function BentoGrid({
   x = 2,
@@ -27,25 +29,44 @@ function BentoGrid({
 
     return (
       <Link key={index} to={`/projects/${projectId}`}>
-        <div
-          className={
-            isCallOut ? `bento-grid-item callout-item` : `bento-grid-item`
-          }
-          style={{}}
+        <Parallax
+          // className="bento-grid-item"
+          bgImage={details.src}
+          bgImageAlt={details.alt}
+          strength={200}
         >
-          {
-            // If the item is a video, render the video element
-            isVideo ? (
-              <video autoPlay loop muted aria-label={details.alt}>
-                <source src={details.src} type="video/mp4" />
-              </video>
-            ) : (
-              <img src={details.src} alt={details.alt} />
-            )
-          }
+          <div
+            className={
+              isCallOut ? `bento-grid-item callout-item` : `bento-grid-item`
+            }
+            style={{}}
+          >
+            {/* {
+              // If the item is a video, render the video element
+              isVideo ? (
+                <video autoPlay loop muted aria-label={details.alt}>
+                  <source src={details.src} type="video/mp4" />
+                </video>
+              ) : (
+                <img src={details.src} alt={details.alt} />
+              )
+            } */}
+            <div className="grid-item-bottom-content-container">
+              {showLabel ? (
+                <div className="item-title">
+                  {details.label}
+                  <p>Website / Brand Identity</p>
+                </div>
+              ) : null}
 
-          {showLabel ? <div className="item-title">{details.label}</div> : null}
-        </div>
+              {/* REMIX ICON */}
+              <div className="icon-container">
+                <span>Explore More</span>
+                <RiArrowRightLine size="1.5rem" color="white" />
+              </div>
+            </div>
+          </div>
+        </Parallax>
       </Link>
     );
   });

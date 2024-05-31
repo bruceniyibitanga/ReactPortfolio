@@ -9,32 +9,85 @@
   gap: 1.5rem;
   a{
     cursor: pointer;
-    .bento-grid-item {
-      position: relative;
-      height: 60rem;
-      transition: all 0.3s ease-in-out;
-      will-change: transform;
-      img, video{
-        transition: all 0.3s ease-in-out;
-        will-change: transform;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 1rem;
+    &:hover{
+      .icon-container{
+        width: 20rem !important;
+        span{
+          animation: icon-container-span-opacity 1s ease-in-out forwards !important;
+        }
       }
     }
-    .item-title{
-      position: absolute;
-      bottom: 1rem;
-      left: 1rem;
-      z-index: 99;
-      font-family: ClashDisplay-Medium, sans-serif;
-      font-size: 1.2rem;
-      color: $primary-light;
+    .react-parallax{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 1rem;
+    }
 
-      background-color: rgba($color: $primary-dark, $alpha: 0.3);
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
+    .bento-grid-item {
+      position: relative;
+      height: 50rem;
+      transition: all 0.3s ease-in-out;
+      will-change: transform;
+      .grid-item-bottom-content-container{
+        position: absolute;
+        bottom: 2rem;
+        left: 2rem;
+        z-index: 99;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 1rem;
+        width: 20rem;
+        .item-title{
+          font-family: ClashDisplay-Medium, sans-serif;
+          font-weight: 600;
+          font-size: 2.5rem;
+          line-height: 2.2rem;
+          color: $primary-light;
+
+          p{
+            font-family: ClashDisplay-Regular, sans-serif;
+            font-size: 1.2rem;
+            line-height: 2rem;
+            color: $primary-light;
+          }
+        }
+        .icon-container{
+          padding: 1.2rem;
+          border: 2px solid $secondary-green;
+          border-radius: 2.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          width: 2rem;
+          transition: all 0.5s ease-in-out;
+
+          span{
+            opacity: 0;
+            // visibility: hidden;
+            position: absolute;
+            top: 50%;
+            left: 1rem;
+            transform: translate(0, -50%);
+            border-radius: 2.5rem;
+            transition: all 1s ease-in-out;
+
+            font-family: ClashDisplay-Medium, sans-serif;
+            font-weight: 500;
+            color: $primary-light;
+          }
+
+          svg{
+            position: absolute;
+            top: 50%;
+            right: 0.5rem;
+            transform: translate(0, -50%);
+          }
+        }
+      }
     }
   }
   @media screen and (max-width: 59em) {
@@ -56,13 +109,15 @@
   }
 }
 
-// CALL OUT ANIMATION
-.bento-grid-container.callout-container{
-  .callout-item{
-    & > * {
-    }
+// ANIMATION
+@keyframes icon-container-span-opacity{
+  0%{
+    opacity: 0;
   }
-  .item-title{
-    display: none;
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 1;
   }
 }
