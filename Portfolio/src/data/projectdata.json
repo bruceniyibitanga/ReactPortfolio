@@ -6,6 +6,7 @@
       "type": "Local Bakery Business",
       "imageSrc": "/img/cafe.jpg",
       "websiteUrl": "http://gateauxbakery.com",
+      "projectObjective": "Create a brand identity and website for Gateaux Bakery to improve brand awareness and customer acquisition",
       "description": "Gateaux Bakery is a comprehensive web solution designed to sweeten the online presence of a local bakery business. This project involved creating an intuitive and visually appealing website, complete with a robust backend for inventory management.",
       "details": [
         "The client, a local bakery, needed a digital platform to showcase their delicious products and manage their inventory effectively. They wanted a solution that was as delightful and user-friendly as the pastries they bake every day.",
@@ -24,6 +25,7 @@
       "type": "NDIS Service Provider",
       "imageSrc": "/img/ndis.jpeg",
       "websiteUrl": "https://dedicatedcommunitycare.com.au",
+      "projectObjective": "Create a website for Dedicated Community Care to improve brand awareness and customer acquisition",
       "description": "Gateaux Bakery is a comprehensive web solution designed to sweeten the online presence of a local bakery business. This project involved creating an intuitive and visually appealing website, complete with a robust backend for inventory management.",
       "details": [
         "The client, a local bakery, needed a digital platform to showcase their delicious products and manage their inventory effectively. They wanted a solution that was as delightful and user-friendly as the pastries they bake every day.",
@@ -36,12 +38,35 @@
       },
       "gridItems": [
         {
-          "isVideo": false,
-          "label": "NDIS Website",
-          "src": "/img/ndis.jpeg"
+          "showLabel": true,
+          "label": "NDIS Provider Website",
+          "logo": "/img/ndis-logo.webp",
+          "src": "/img/cafe.jpg",
+          "alt": "Image of a support worker with elderly client"
+        },
+        {
+          "showLabel": true,
+          "label": "Botani",
+          "src": "/img/ndis.jpeg",
+          "alt": "Image of Plant",
+          "isVideo": false
+        },
+        {
+          "showLabel": true,
+          "label": "Sams Warehouse",
+          "src": "/img/wilson-prom2.webp",
+          "alt": "Image of little boy holding vegetables",
+          "isVideo": false
+        },
+        {
+          "showLabel": true,
+          "label": "Sams Warehouse",
+          "src": "/img/garden.webp",
+          "alt": "Image of little boy holding vegetables",
+          "isVideo": false
         }
       ],
-      "review": "Working with Bruce has been phenomenal."
+      "review": "Bruce's work on our website has been phenomenal.  Bruce has exceeded our expectations. The new website has given our bakery a professional online presence and the backend inventory management system has made our work much easier."
     }
   ]
 }

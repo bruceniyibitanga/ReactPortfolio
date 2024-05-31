@@ -93,8 +93,9 @@ dl dl,
 dl ol,
 dl ul,
 ol dl,
-ul dl {
+ul dl, ul {
     margin: 0;
+    padding: 0;
 }
 
 /**

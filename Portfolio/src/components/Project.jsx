@@ -1,9 +1,9 @@
 import { React, useState, useEffect, useRef } from "react";
-import BentoGrid from "./BentoGrid";
-import Button from "./Button";
-import Data from "../data/projectdata.json";
 import { useParams } from "react-router-dom";
+import BentoGrid from "./BentoGrid";
+import Data from "../data/projectdata.json";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 function Project() {
   const { projectId } = useParams();
@@ -11,11 +11,12 @@ function Project() {
 
   useEffect(() => {
     window.scrollTo({
-      top: document.body, // Adjust based on your header's height
+      top: document.body,
       behavior: "smooth",
     });
 
     const project = Data.projects.find((project) => project.id === projectId);
+    console.log(project);
     setProject(project);
   }, [projectId]);
   return (
@@ -30,30 +31,42 @@ function Project() {
               className="project-img"
             />
             <div className="project-header-text-container">
-              <h2>{project.name}</h2>
+              <h1>{project.name}</h1>
               <p>{project.type}</p>
             </div>
           </header>
           <div className="project-information-container">
-            <a href={project.websiteUrl} target="_blank" className="btn">
-              Visit Website
-            </a>
-            <em>{project.description}</em>
-            <p>{project.details[0]}</p>
-            <p>{project.details[1]}</p>
-            <p>{project.details[2]}</p>
+            <div className="project-information-left">
+              <h2>{project.projectObjective}</h2>
+
+              <span>Project Focus</span>
+              <ul>
+                <li>Brand Identity</li>
+                <li>UX Research</li>
+                <li>UI / UX Design</li>
+                <li>Development</li>
+              </ul>
+            </div>
+            <div className="project-information-right">
+              {/* <a href={project.websiteUrl} target="_blank" className="btn">
+                Visit Website
+              </a> */}
+              <em>{project.description}</em>
+              <p>{project.details[0]}</p>
+              <p>{project.details[1]}</p>
+              <p>{project.details[2]}</p>
+            </div>
           </div>
 
           {/* Bento Grid */}
           <BentoGrid
+            gridItems={project.gridItems}
             x={project.gridDimensions.x}
             y={project.gridDimensions.y}
           />
 
           <div className="project-review-container">
-            <div className="review">
-              Working with Bruce has been phenomenol.
-            </div>
+            <blockquote className="review">{project.review}</blockquote>
           </div>
         </div>
       ) : (
@@ -62,6 +75,7 @@ function Project() {
           <p>Project Id provided</p>
         </div>
       )}
+      <Footer />
     </>
   );
 }

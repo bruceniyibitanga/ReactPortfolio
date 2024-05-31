@@ -44,7 +44,8 @@ const gridItems = [
   {
     showLabel: true,
     label: "NDIS Provider Website",
-    src: "/img/ndis.jpeg",
+    logo: "/img/ndis-logo.webp",
+    src: "/img/dcc-hero.jpg",
     alt: "Image of a support worker with elderly client",
   },
   {
