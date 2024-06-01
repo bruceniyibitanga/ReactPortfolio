@@ -38,28 +38,28 @@
       },
       "gridItems": [
         {
-          "showLabel": true,
+          "showLabel": false,
           "label": "NDIS Provider Website",
           "logo": "/img/ndis-logo.webp",
           "src": "/img/cafe.jpg",
           "alt": "Image of a support worker with elderly client"
         },
         {
-          "showLabel": true,
+          "showLabel": false,
           "label": "Botani",
           "src": "/img/ndis.jpeg",
           "alt": "Image of Plant",
           "isVideo": false
         },
         {
-          "showLabel": true,
+          "showLabel": false,
           "label": "Sams Warehouse",
           "src": "/img/wilson-prom2.webp",
           "alt": "Image of little boy holding vegetables",
           "isVideo": false
         },
         {
-          "showLabel": true,
+          "showLabel": false,
           "label": "Sams Warehouse",
           "src": "/img/garden.webp",
           "alt": "Image of little boy holding vegetables",

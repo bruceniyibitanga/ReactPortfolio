@@ -1,15 +1,68 @@
 @import 'globals.scss';
 
-.experience-section{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+.about-section-wrapper{
+    position: relative;
+    padding: 2rem;
+    .text-information-section-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 2rem;
+        @media screen and (min-width: 60em) {
+            flex-direction: row;
+        }
+        .left-content-sticky{
+            flex: 1;
+            .highlight{
+                background-color: rgba($color: $secondary-green, $alpha: 0.6);
+                color: $secondary-purple;
+                padding: 0.2rem;
+                border-radius: 0.2rem;
+            }
+            @media screen and (min-width: 60em) {
+                position: sticky;
+                top: 3rem;
+                left: 0;
+            }
+        }
 
-    margin-top: 1rem;
+        .right-content-scroll{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 2rem;
 
-    @media screen and (min-width: 50em) {
-        margin-top: 3rem;
+            img{
+                object-fit: cover;
+                height: 30rem;
+            }
+        }
+    }
+    .quote-section{
+        margin-top: 2rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        .quote{
+            font-family: ClashDisplay-Medium;
+            font-size: 1.2rem;
+            @media screen and (min-width: 60em) {
+                font-size: 1.5rem;
+            }
+            .highlight{
+                background-color: rgba($color: $secondary-green, $alpha: 0.6);
+                color: $secondary-purple;
+                padding: 0.2rem;
+                border-radius: 0.2rem;
+            }
+        }
+        .quote-reference{
+            font-size: 0.8rem;
+        }
     }
 }

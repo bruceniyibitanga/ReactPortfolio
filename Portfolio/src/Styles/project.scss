@@ -1,9 +1,6 @@
 @import 'globals.scss';
 
 .project-wrapper{
-    .bento-grid-section{
-        padding: 0 !important;
-    }
     padding: 0 2rem;
     .project-header-container{
         position: relative;
@@ -109,7 +106,19 @@
         }
     }
     .bento-grid-section{
-        margin-top: 2rem
+        margin-top: 2rem;
+        padding: 0;
+        .bento-grid-container{
+            .react-parallax{
+                &:nth-child(1){
+                grid-column: span 2 !important;
+                }
+                &:nth-child(4){
+                grid-column: span 2 !important;
+                }
+
+            }
+        }
     }
 
     .project-review-container{

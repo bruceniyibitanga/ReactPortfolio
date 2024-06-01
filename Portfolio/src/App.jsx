@@ -13,12 +13,14 @@ import "./Styles/contactform.scss";
 import "./Styles/footer.scss";
 import "./Styles/modal.scss";
 import "./Styles/bentogrid.scss";
+import "./Styles/gridcontent.scss";
 
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 import BentoGrid from "./components/BentoGrid";
+import GridContent from "./components/GridContent";
 
 // LANDING PAGE SLIDE SHOW IMAGES
 const image1 = "/img/profile.webp";
@@ -39,6 +41,8 @@ let images = [
 // VIDEO IMPORTS
 import GauteauxVideo from "./assets/videos/gateaux.mp4";
 import SamsWarehouseVideo from "./assets/videos/sams-warehouse.mp4";
+import About from "./pages/About";
+import GridContainer from "./components/GridContent";
 
 const gridItems = [
   {
@@ -76,9 +80,12 @@ function App() {
     <>
       <ReactLenis root>
         <Navbar />
+
         <Home images={images} />
 
         <BentoGrid x={2} y={2} gridItems={gridItems} />
+
+        <GridContent />
 
         <Element name="contact">
           <ContactForm />

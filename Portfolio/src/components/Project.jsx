@@ -63,6 +63,7 @@ function Project() {
             gridItems={project.gridItems}
             x={project.gridDimensions.x}
             y={project.gridDimensions.y}
+            removeLinkWrapper={true}
           />
 
           <div className="project-review-container">

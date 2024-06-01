@@ -26,7 +26,7 @@ function Home(images) {
       <div className="landing-content-container">
         <div className="text-container">
           <h1>
-            Hello, I'm Bruce, a passionate software developer and engineer.
+            Hello, I'm Bruce, a passionate software developer in Miles, West QLD
           </h1>
           <p>
             I care a lot about using design for positive impact. and enjoy

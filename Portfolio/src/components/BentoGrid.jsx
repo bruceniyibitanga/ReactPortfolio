@@ -5,16 +5,16 @@ import { Parallax } from "react-parallax";
 import { RiArrowRightLine } from "@remixicon/react";
 
 function BentoGrid({
-  x = 2,
-  y = 1,
   isCallOut = false,
   gridItems = [
     { isVideo: false, showLabel: false, label: "", src: "", alt: "" },
   ],
+  removeLinkWrapper = false,
 }) {
   useEffect(() => {}, []);
+
   // Calculate the total number of divs needed
-  const totalDivs = x * y;
+  const totalDivs = gridItems.length;
 
   // Generate the items array
   const items = Array.from({ length: totalDivs }, (_, index) => {
@@ -28,46 +28,67 @@ function BentoGrid({
     );
 
     return (
-      <Link key={index} to={`/projects/${projectId}`}>
-        <Parallax
-          // className="bento-grid-item"
-          bgImage={details.src}
-          bgImageAlt={details.alt}
-          strength={200}
-        >
-          <div
-            className={
-              isCallOut ? `bento-grid-item callout-item` : `bento-grid-item`
-            }
-            style={{}}
+      <>
+        {removeLinkWrapper ? (
+          <Parallax
+            bgImage={details.src}
+            bgImageAlt={details.alt}
+            strength={200}
           >
-            {/* {
-              // If the item is a video, render the video element
-              isVideo ? (
-                <video autoPlay loop muted aria-label={details.alt}>
-                  <source src={details.src} type="video/mp4" />
-                </video>
-              ) : (
-                <img src={details.src} alt={details.alt} />
-              )
-            } */}
-            <div className="grid-item-bottom-content-container">
-              {showLabel ? (
-                <div className="item-title">
-                  {details.label}
-                  <p>Website / Brand Identity</p>
-                </div>
-              ) : null}
-
-              {/* REMIX ICON */}
-              <div className="icon-container">
-                <span>Explore More</span>
-                <RiArrowRightLine size="1.5rem" color="white" />
+            <div
+              className={
+                isCallOut ? `bento-grid-item callout-item` : `bento-grid-item`
+              }
+              style={{}}
+            >
+              <div className="grid-item-bottom-content-container">
+                {showLabel ? (
+                  <>
+                    <div className="item-title">
+                      {details.label}
+                      <p>Website / Brand Identity</p>
+                    </div>
+                    <div className="icon-container">
+                      <span>Explore More</span>
+                      <RiArrowRightLine size="1.5rem" color="white" />
+                    </div>
+                  </>
+                ) : null}
               </div>
             </div>
-          </div>
-        </Parallax>
-      </Link>
+          </Parallax>
+        ) : (
+          <Link to={`/projects/${projectId}`}>
+            <Parallax
+              bgImage={details.src}
+              bgImageAlt={details.alt}
+              strength={200}
+            >
+              <div
+                className={
+                  isCallOut ? `bento-grid-item callout-item` : `bento-grid-item`
+                }
+                style={{}}
+              >
+                <div className="grid-item-bottom-content-container">
+                  {showLabel ? (
+                    <>
+                      <div className="item-title">
+                        {details.label}
+                        <p>Website / Brand Identity</p>
+                      </div>
+                      <div className="icon-container">
+                        <span>Explore More</span>
+                        <RiArrowRightLine size="1.5rem" color="white" />
+                      </div>
+                    </>
+                  ) : null}
+                </div>
+              </div>
+            </Parallax>
+          </Link>
+        )}
+      </>
     );
   });
 
