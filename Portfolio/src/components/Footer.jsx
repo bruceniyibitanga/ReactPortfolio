@@ -58,7 +58,7 @@ function Footer() {
               <h2>Let's create something great, together.</h2>
               <a href="mailto:hello@xenova.com.au">hello@xenova.com.au</a>
             </div>
-            <form className="footer-form" netlify>
+            <form className="footer-form" name="contact" netlify>
               <input
                 type="text"
                 name="name"
