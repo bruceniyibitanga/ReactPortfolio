@@ -16,7 +16,7 @@ function Home(images) {
     }
 
     setTimeout(nextImage, 3000);
-  });
+  }, []);
 
   return (
     <div className="landing-container image-container">

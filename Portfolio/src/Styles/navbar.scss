@@ -1,62 +1,59 @@
 @import 'globals.scss';
-
-@media screen and (max-width: 36em){
-}
-
-@media screen and (min-width: 36em){
-    .navbar{
-        width: 100vw;
-        // padding: 1.5rem 3rem;
-        display: flex;
-        justify-content: center;
-        position: sticky;
-        top: 0;
-        left: 0;
-        z-index: 99999999;
-        .navbar-logo{
-            display: none;
-            img{
-                width: 2rem;
-                transition: all 0.3s ease-in-out;
-                &:hover{
-                    transform: scale(1.05);
-                }
+.navbar{
+    width: 100vw;
+    // padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 90%;
+    left: 0;
+    z-index: 99999999;
+    .navbar-logo{
+        display: none;
+        img{
+            width: 2rem;
+            transition: all 0.3s ease-in-out;
+            &:hover{
+                transform: scale(1.05);
             }
         }
+    }
+    .nav-menu{
+        display: flex;
+        gap: 0.2rem;
+        background: rgba(white, 0.8);
+        backdrop-filter: blur(104px);
+        border-radius: 2.5rem;
+        padding: 0.2rem;
+        .nav-item{
+            padding: 0.5rem 0.8rem;
+            transition: all 0.5s ease-in-out;
+            font-size: 0.9rem;
+            
+            .active{
+                background-color: rgba($color: $primary-dark, $alpha: 1);
+                color: $secondary-green !important;
+                border-radius: 2.5rem;
+                padding: 0.5rem 1rem;
+                cursor: pointer;
+            }
 
-        .nav-menu{
-            display: flex;
-            gap: 2rem;
-            background: rgba(white, 0.8);
-            backdrop-filter: blur(104px);
-            border-radius: 2.5rem;
-            padding: 0.2rem;
-            .nav-item{
-                padding: 0.5rem 0.8rem;
+            a{
+                color: $primary-dark;
                 transition: all 0.5s ease-in-out;
-                font-size: 0.9rem;
-                a{
-                    color: $primary-dark;
-                }
                 &:hover{
-                    border-radius: 2.5rem;
-                    background-color: rgba($color: $primary-dark, $alpha: 0.5);
-                    padding: 0.5rem 1.2rem;
+                    color: $secondary-green;
                     cursor: pointer;
                 }
             }
         }
     }
 
-    .burger-menu{
-        display: none;
+    @media screen and (min-width: 40em) {
+        top: 5%;
     }
 }
 
-.activeLink{
-    background-color: rgba($color: $primary-dark, $alpha: 1);
-    color: $secondary-green !important;
-    border-radius: 2.5rem;
-    padding: 0.2rem 0.8rem;
-    cursor: pointer;
-}
+.burger-menu{
+    display: none;
+}   

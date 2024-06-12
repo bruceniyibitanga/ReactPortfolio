@@ -1,7 +1,8 @@
 import { React, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import { RiMenu3Line } from "@remixicon/react";
 import Logo from "../assets/logo.svg";
+import About from "../pages/About";
 
 function Navbar() {
   return (
@@ -11,16 +12,52 @@ function Navbar() {
       </Link>
       <ul className={`nav-menu navbar-container`}>
         <li className="nav-item">
-          <Link to="/">Home</Link>
+          <Link
+            to="home"
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            duration={600}
+            offset={-70}
+          >
+            Home
+          </Link>
         </li>
         <li className="nav-item">
-          <Link to="/about">About</Link>
+          <Link
+            to="about"
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            duration={600}
+            offset={-20}
+          >
+            About
+          </Link>
         </li>
         <li className="nav-item">
-          <Link to="/projects">Projects</Link>
+          <Link
+            to="projects"
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            duration={600}
+            offset={-20}
+          >
+            Projects
+          </Link>
         </li>
         <li className="nav-item">
-          <Link to="">Contact</Link>
+          <Link
+            to="contact"
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            duration={800}
+            offset={-20}
+          >
+            Contact
+          </Link>
         </li>
       </ul>
       <div className="burger-menu" onClick={() => setMenu(!menu)}>

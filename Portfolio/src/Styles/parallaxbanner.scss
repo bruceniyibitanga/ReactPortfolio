@@ -1,0 +1,74 @@
+@import "globals.scss";
+
+.full-page-callout-banner{
+    position: relative !important;
+    .parallax-video-container{
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+        video{
+            position: absolute;
+            object-fit: cover;
+            width: 100vw;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -99999;
+        }
+    }
+    .parallax-main-content{
+        background-color: $secondary-beige;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            .text{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 0.5rem;
+                color: $dark-green;
+                margin: 15rem 0;
+                @media screen and (min-width:60em){
+                    flex-direction: row;
+                }
+
+                h3{
+                    text-transform: uppercase;
+                    font-size: 0.8rem;
+                    @media screen and (min-width:60em){
+                        flex: 0.5;
+                        font-size: 1rem;
+                    }
+                }
+                p{
+                    font-family: ClashDisplay-Medium;
+                    font-size: 1.5rem;
+                    color: $primary-dark;
+                    text-align: left;
+                    line-height: 1.5rem;
+                    @media screen and (min-width:60em) {
+                        font-size: 5rem;
+                        line-height: 4.5rem;
+                        flex: 3;
+                    }
+                    span{
+                        background-color: rgba($color: $secondary-green, $alpha: 0.8);
+                        border-radius: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -55,6 +55,7 @@ html {
     /* 6 */
 
     overflow-x: hidden;
+    color: #070035;
 }
 
 /* Sections
@@ -67,6 +68,7 @@ html {
 body {
     margin: 0;
     background-color: #FCF7EF;
+    transition: all 0.8s ease-in-out;
 }
 
 /**
@@ -673,8 +675,9 @@ html.lenis, html.lenis body {
 
 // Global Colors
 $primary-dark: #272727;
-$secondary-dark: #000000;
 $primary-light: #FFFFFF;
+$dark-green: #0F1D07;
+$secondary-dark: #070035;
 $secondary-green: #10E597;
 $secondary-purple: #6380F8;
 $secondary-beige: #FCF7EF;

@@ -11,8 +11,6 @@ function BentoGrid({
   ],
   removeLinkWrapper = false,
 }) {
-  useEffect(() => {}, []);
-
   // Calculate the total number of divs needed
   const totalDivs = gridItems.length;
 
@@ -58,7 +56,7 @@ function BentoGrid({
             </div>
           </Parallax>
         ) : (
-          <Link to={`/projects/${projectId}`}>
+          <Link to={`${details.website}`} target="_blank">
             <Parallax
               bgImage={details.src}
               bgImageAlt={details.alt}

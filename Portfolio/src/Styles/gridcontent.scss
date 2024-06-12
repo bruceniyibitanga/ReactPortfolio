@@ -3,17 +3,19 @@
 .grid-text-content-container{
     padding: 2rem;
     h2, h2>span{
+        color: $dark-green;
         font-family: ClashDisplay-Bold, sans-serif;
-        font-size: 2rem;
-        line-height: 2rem;
+        font-size: 2.5rem;
+        line-height: 2.2rem;
         margin: 2rem 0;
-        color: $primary-dark;
-        span{
-            display: block ;
-        }
+        
         @media screen and (min-width: 60em) {
+            span{
+                display: block ;
+                margin-top: 0;
+            }
             font-size: 7rem;
-            line-height: 4.5rem;
+            line-height: 6rem;
         }
     }
     .content-container{
@@ -34,11 +36,12 @@
             justify-content: flex-start;
             align-items: flex-start;
             gap: 2rem;
+            color: #0F1D07;
             
             .text-content{
                 & > *{
                     font-family: ClashDisplay-Regular, sans-serif;
-
+                    font-size: 1.1rem;
                     @media screen and (min-width: 60em) {
                         font-size: 1.2rem;
                     }
@@ -46,6 +49,7 @@
                 em{
                     font-family: ClashDisplay-Medium, sans-serif;
                     font-style: normal;
+                    font-size: 1.2rem;
                 }
                 display: flex;
                 flex-direction: column;

@@ -6,14 +6,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-
-    background: rgb(0, 0, 0);
+    height: 105vh;
+    background: rgba($primary-light, 0.8);
     backdrop-filter: blur(5rem);
     
-    color: $primary-light;
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
     position: relative;
+    transition: all 1s ease;
 
     //  Colored circles behind project cards
     .colored-circles-container{
@@ -62,12 +62,32 @@
             margin-bottom: 3rem;
         }
         .footer-content-container{
+            text-align: left;
             .footer-text{
-                margin-top: 3rem;
-                font-family: ClashDisplay-Medium;
-                font-size: 2rem;
-                line-height: 2rem;
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
                 text-align: left;
+                h2{
+                    font-size: 3.5rem;
+                    line-height: 3rem;
+                    @media screen and (min-width:60em) {
+                        font-size: 6rem;
+                        line-height: 4.5rem;
+                    }
+                }
+                a{
+                    font-family: ClashDisplay-Medium;
+                    font-size: 1.5rem;
+                    @media screen and (min-width:60em) {
+                        font-size: 2rem;
+                        
+                    }
+                }
+            }
+            a{
+                color: $secondary-dark;
+                font-size: 2rem;
             }
             form{
                 position: relative;
@@ -80,13 +100,13 @@
                     margin: 1rem 0rem;
                     border: none;
                     border-radius: 0.5rem;
-                    background: rgba(255, 255, 255, 0.171);
+                    background: rgba($secondary-dark, 0.171);
                     backdrop-filter: blur(2rem);
-                    color: $primary-light;
+                    color: $secondary-dark;
                     font-family: ClashDisplay-Regular;
                     font-size: 1rem;
                     &::placeholder{
-                        color: $primary-light;
+                        color: $secondary-dark;
                 }
             }
 
@@ -101,7 +121,6 @@
                 border-radius: 0.5rem;
                 background: $secondary-purple;
                 color: $primary-light;
-                font-family: ClashDisplay-Regular;
                 font-size: 1rem;
                 cursor: pointer;
                 transition: all 0.3s ease;

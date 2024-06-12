@@ -1,7 +1,7 @@
 import React from "react";
-import Profile from "../assets/profile.jpg";
 import { RiArrowRightLine } from "@remixicon/react";
 import { Link } from "react-router-dom";
+import { Parallax } from "react-parallax";
 
 function GridContainer() {
   return (
@@ -9,7 +9,7 @@ function GridContainer() {
       <section className="grid-text-content-container">
         <h2>
           <h2>
-            Extraordinary <span>Digital Experiences</span>{" "}
+            Tailored Solutions <span>for a Digital Age</span>
           </h2>
         </h2>
         <div className="content-container">
@@ -24,9 +24,10 @@ function GridContainer() {
                 home!
               </p>
               <p>
-                I'm a Software Developer based in Miles, West QLD. I love
-                creating digital experences that grow businesses and make
-                people's lives easier.
+                I'm a Software Developer based in Miles, West QLD. I'm committed
+                to delivering cutting-edge solutions with a personal touch. My
+                approach combines modern techniques with time-tested expertise
+                to provide services you can trust.
               </p>
             </div>
             <Link to="/about" className="btn">
@@ -34,7 +35,7 @@ function GridContainer() {
             </Link>
           </div>
           <div className="content-right">
-            <img src={Profile} alt="Profile image" />
+            <img src="/img/forest-xplore.jpg" alt="Profile image" />
           </div>
         </div>
       </section>

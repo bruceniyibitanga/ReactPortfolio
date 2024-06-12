@@ -11,7 +11,7 @@
     cursor: pointer;
     &:hover{
       .icon-container{
-        width: 20rem !important;
+        width: 70% !important;
         span{
           animation-delay: 0.2s;
           animation: icon-container-span-opacity 1s ease-in-out forwards !important;
@@ -104,22 +104,6 @@
       & > div {
       position: relative;
       height: 120vh;
-    }
-  }
-}
-
-
-// WITHOUT LINK WRAPPER
-.bento-grid-container { 
-  display: grid;
-  gap: 2rem;
-  .react-parallax{
-    width: 100% !important;
-    border-radius: 2rem;
-    img{
-      height: 100% !important;
-      width: 100%  !important;
-      object-fit: cover;
     }
   }
 }

@@ -1,12 +1,13 @@
 @import 'globals.scss';
 @import 'button.scss';
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 .landing-container {
     height: 100vh;
-    margin: -2rem 2rem 2rem 2rem;
+    margin: -0.5rem 2rem 2rem 2rem;
     position: relative;
     
-.image-container {
+    .image-container {
         width: 100%;
         img {
             width: 100%;

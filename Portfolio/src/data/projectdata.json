@@ -20,6 +20,54 @@
       "review": "Bruce's work on our website has been phenomenal. From understanding our needs to implementing a solution that not only looks great but is also easy to use, Bruce has exceeded our expectations."
     },
     {
+      "id": "botani",
+      "name": "Botani",
+      "type": "Nursery E-commerce Site",
+      "imageSrc": "/img/botani-landing.jpg",
+      "websiteUrl": "http://gateauxbakery.com",
+      "projectObjective": "Create a brand identity and website for Botani to improve brand awareness and customer acquisition",
+      "description": "Botani is a comprehensive web solution designed to sweeten the online presence of a local nursery business. This project involved creating an intuitive and visually appealing website, complete with a robust backend for inventory management.",
+      "details": [
+        "The client, a local nursery, needed a digital platform to showcase their plants and manage their inventory effectively. They wanted a solution that was as delightful and user-friendly as the plants they grow every day.",
+        ""
+      ],
+      "gridDimensions": {
+        "x": 2,
+        "y": 3
+      },
+      "gridItems": [
+        {
+          "showLabel": false,
+          "label": "Botani",
+          "src": "/img/botani-landing.jpg",
+          "alt": "Image of Plant",
+          "isVideo": false
+        },
+        {
+          "showLabel": false,
+          "label": "Photo of plant",
+          "logo": "",
+          "src": "/img/botani-landing.jpg",
+          "alt": "Image of a support worker with elderly client"
+        },
+        {
+          "showLabel": false,
+          "label": "Sams Warehouse",
+          "src": "/img/wilson-prom2.webp",
+          "alt": "Image of little boy holding vegetables",
+          "isVideo": false
+        },
+        {
+          "showLabel": false,
+          "label": "Botani mobile mockup",
+          "src": "/img/botani/mockup/iphonexr-mockup.png",
+          "alt": "Image of little boy holding vegetables",
+          "isVideo": false
+        }
+      ],
+      "review": "Bruce's work on our website has been phenomenal. From understanding our needs to implementing a solution that not only looks great but is also easy to use, Bruce has exceeded our expectations."
+    },
+    {
       "id": "ndis-provider-website",
       "name": "NDIS Provider Website",
       "type": "NDIS Service Provider",
@@ -32,10 +80,6 @@
         "We designed a website that not only showcases the bakery's products in an appetizing way but also allows the client to easily update their inventory as needed. The website features high-quality images of the bakery's offerings, detailed product descriptions, and an easy-to-navigate layout.",
         "The website was built using modern web development technologies. The frontend was designed with a focus on UI/UX, ensuring a seamless and enjoyable experience for visitors. The backend was developed to provide the client with an easy-to-use interface for managing inventory."
       ],
-      "gridDimensions": {
-        "x": 2,
-        "y": 3
-      },
       "gridItems": [
         {
           "showLabel": false,
