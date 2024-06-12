@@ -52,13 +52,20 @@ function Footer() {
   return (
     <>
       <footer className="footer">
-        <div className="footer-container wrapper">
+        <div className="footer-container">
           <div className="footer-content-container">
             <div className="footer-text">
               <h2>Let's create something great, together.</h2>
               <a href="mailto:hello@xenova.com.au">hello@xenova.com.au</a>
             </div>
-            <form className="footer-form" action="#">
+            <form className="footer-form" netlify>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Name"
+                required
+              />
               <input
                 type="email"
                 name="email"
@@ -66,7 +73,15 @@ function Footer() {
                 placeholder="Email"
                 required
               />
-              <button type="submit">Subscribe</button>
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+                placeholder="Message"
+                required
+              ></textarea>
+              <button type="submit">Send Message</button>
             </form>
           </div>
           <div className="footer-link-container">

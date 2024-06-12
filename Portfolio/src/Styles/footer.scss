@@ -1,58 +1,19 @@
 @import 'globals.scss';
 
 .footer {
-    margin-top: 3.5rem;
+    // margin-top: 3.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    height: 105vh;
+    padding: 2rem;
     background: rgba($primary-light, 0.8);
     backdrop-filter: blur(5rem);
-    
+    height: 100vh;
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
     position: relative;
     transition: all 1s ease;
-
-    //  Colored circles behind project cards
-    .colored-circles-container{
-        position: absolute;
-        top: -5rem;
-        right: -4rem;
-        z-index: -9999;
-        .colored-circle{
-            width: 15rem;
-            height: 15rem;
-            border-radius: 50%;
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-            opacity: 0.3;
-        }
-
-        .blue-circle{
-            position: relative;
-            background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
-            mix-blend-mode: var(--blending);
-        }
-
-        .red-circle{
-            position: absolute;
-            top: 0;
-            left: 2.5rem;
-            background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
-            mix-blend-mode: var(--blending);
-        }
-
-        .yellow-circle{
-            position: absolute;
-            top: 3rem;
-            left: 50%;
-            transform: translateX(-50%);
-            background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
-            mix-blend-mode: var(--blending);
-        }
-    }
 
     .footer-container{
         // All rights reserved text
@@ -63,7 +24,18 @@
         }
         .footer-content-container{
             text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            
+            @media screen and (min-width:60em){
+                flex-direction: row
+            }
+
             .footer-text{
+                flex: 1;
                 display: flex;
                 flex-direction: column;
                 gap: 1.5rem;
@@ -92,42 +64,33 @@
             form{
                 position: relative;
                 margin-top: 2rem;
+                display: flex;
+                gap: 1rem;
+                flex-direction: column;
+                flex: 1;
             }
-            form > input{
-                    
-                    width: 100%;
-                    padding: 1rem;
-                    margin: 1rem 0rem;
-                    border: none;
-                    border-radius: 0.5rem;
-                    background: rgba($secondary-dark, 0.171);
-                    backdrop-filter: blur(2rem);
-                    color: $secondary-dark;
-                    font-family: ClashDisplay-Regular;
-                    font-size: 1rem;
-                    &::placeholder{
-                        color: $secondary-dark;
-                }
+            form > input, textarea{
+            width: 100%;
+            background: none;
+            border: 1px solid $secondary-dark;
+            font-family: ClashDisplay-Regular, sans-serif;
+            font-size: 1rem;
+            padding: 0.8rem 1.2rem;
+            border-radius: 0.8rem;
+            transition: all 0.3s ease-in-out;
+
+            &:focus{
+                outline: none;
+                border: 1px solid $secondary-green;
             }
+        }
 
             form > button{
-                position: absolute;
-                top: 0;
-                right: 0;
-                width: 100%;
-                padding: 1rem;
-                margin: 1rem 0rem;
-                border: none;
-                border-radius: 0.5rem;
-                background: $secondary-purple;
-                color: $primary-light;
-                font-size: 1rem;
-                cursor: pointer;
-                transition: all 0.3s ease;
-                &:hover{
-                    background: $secondary-green;
-                }
-            }
+            width: 100%;
+            background-color: $secondary-green;
+            color: $primary-dark;
+            text-align: center;
+        }
         }
         .footer-link-container{
             margin: 2rem 0rem;
