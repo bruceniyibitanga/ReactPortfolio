@@ -19,7 +19,7 @@ function FullPageCalloutBanner() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          video.play();
+          // video.play();
         }
       });
     }, options);
