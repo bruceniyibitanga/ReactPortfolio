@@ -5,10 +5,10 @@
     padding: 2rem;
     .about-landing-section{
         // height: 30vh;
-        h1{
-            font-size: 2rem;
+        h2{
+            font-size: 3rem;
             font-family: ClashDisplay-Bold;
-            line-height: 2rem;
+            line-height: 2.5rem;
             color: $dark-green;
             @media screen and (min-width: 60em) {
                 font-size: 6rem;
@@ -21,8 +21,14 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        margin-top: 5rem;
+        margin-top: 2rem;
         gap: 2rem;
+        
+        font-size: 1.5rem;
+
+        @media screen and (min-width:60em) {
+            font-size: 1.8rem;
+        }
 
         color: $dark-green;
         @media screen and (min-width: 60em) {
@@ -30,11 +36,6 @@
         }
         .left-content-sticky{
             flex: 1;
-            p{
-                @media screen and (min-width:60em) {
-                    font-size: 1.2rem;
-                }
-            }
             .parallax-wrapper{
                 height: 50rem;
                 margin-top: 2rem;
@@ -43,6 +44,11 @@
                     height: 100% !important;
                     object-fit: cover !important;
                     border-radius: 2rem !important;
+
+                    img{
+                        height: 100% !important;
+                        object-fit: cover;
+                    }
                 }
             }
             .highlight{
@@ -65,10 +71,11 @@
             justify-content: flex-start;
             align-items: flex-start;
             gap: 2rem;
-            p{
-                @media screen and (min-width:60em) {
-                    font-size: 1.2rem;
-                }
+
+            font-size: 1.5rem;
+
+             @media screen and (min-width:60em) {
+                font-size: 1.8rem;
             }
             img{
                 object-fit: cover;
@@ -86,6 +93,7 @@
         justify-content: center;
         align-items: flex-start;
         gap: 3rem;
+        height: 100%;
         @media screen and (min-width: 60em) {
             flex-direction: row;
         }
@@ -98,6 +106,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                height: 100%;
                 
                 img{
                     object-fit: cover;
@@ -117,15 +126,16 @@
                 align-items: flex-start;
                 gap: 1rem;
                 h3{
-                    font-size: 1.5rem;
+                    font-size: 2rem;
                     @media screen and (min-width: 60em) {
-                        font-size: 2rem;
+                        font-size: 2.5rem;
                     }
                 
                 }
                 p{
-                    @media screen and (min-width: 60em) {
-                        font-size: 1.2rem;
+                    font-size: 1.5rem;
+                    @media screen and (min-width:60em) {
+                        font-size: 1.8rem;
                     }
                 }
             }

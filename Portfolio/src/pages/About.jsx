@@ -72,7 +72,7 @@ function About() {
     <>
       <section className="about-section-wrapper">
         <div className="about-landing-section">
-          <h1>Forging Digital Excellence from Resilient Roots </h1>
+          <h2>Digital Excellence from Resilient Roots </h2>
         </div>
         <div className="text-information-section-container">
           <div className="left-content-sticky">

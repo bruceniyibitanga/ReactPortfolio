@@ -43,12 +43,13 @@
         .text-container {
             text-align: left;
             h1 {
-                font-family: ClashDisplay-Medium, sans-serif;
+                font-family: ClashDisplay-Regular, sans-serif;
                 color: $primary-light;
                 font-size: 2rem;
                 line-height: 1.8rem;
 
                 @media screen and (min-width: 70em){
+                    font-family: ClashDisplay-Medium, sans-serif;
                     font-size: 3rem;
                     line-height: 2.8rem;
                 }
@@ -59,7 +60,7 @@
                 font-family: "Ubuntu", monospace;
                 color: $primary-light;
                 font-size: 1rem;
-                line-height: 1.2rem;
+                line-height: 1.1rem;
 
                 @media screen and (min-width: 70em){
                     font-size: 1.2rem;

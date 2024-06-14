@@ -9,11 +9,11 @@
     padding: 2rem;
     background: rgba($primary-light, 0.8);
     backdrop-filter: blur(5rem);
-    height: 100vh;
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
     position: relative;
     transition: all 1s ease;
+    padding: 10rem 2rem;
 
     .footer-container{
         // All rights reserved text
@@ -64,10 +64,11 @@
             form{
                 position: relative;
                 margin-top: 2rem;
+                width: 100%;
                 display: flex;
+                flex: 1;
                 gap: 1rem;
                 flex-direction: column;
-                flex: 1;
             }
             form > input, textarea{
             width: 100%;
