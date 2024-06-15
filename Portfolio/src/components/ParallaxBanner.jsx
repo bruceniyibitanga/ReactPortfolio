@@ -33,7 +33,7 @@ function FullPageCalloutBanner() {
           onScroll={{ scale: [1, 2, 3, 1] }}
           className="parallax-video-container"
         >
-          <video loop muted>
+          <video autoPlay loop muted>
             <source src={CompanyVideo} />
           </video>
         </motion.div>
