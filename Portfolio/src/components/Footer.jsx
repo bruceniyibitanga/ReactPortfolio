@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-scroll";
 
 function HandleBorderRadius(isDownScroll = true, currentTopRadii, footer) {
   if (isDownScroll) {
@@ -85,18 +86,46 @@ function Footer() {
             </form>
           </div>
           <div className="footer-link-container">
-            <a href="" className="footer-link">
+            <Link
+              to="home"
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              duration={600}
+              offset={-70}
+            >
               Home
-            </a>
-            <a href="" className="footer-link">
+            </Link>
+            <Link
+              to="about"
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              duration={600}
+              offset={-20}
+            >
               About
-            </a>
-            <a href="" className="footer-link">
+            </Link>
+            <Link
+              to="projects"
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              duration={600}
+              offset={-20}
+            >
               Projects
-            </a>
-            <a href="" className="footer-link">
-              Contact Us
-            </a>
+            </Link>
+            <Link
+              to="contact"
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              duration={800}
+              offset={-20}
+            >
+              Contact
+            </Link>
           </div>
           <p>All rights reserved.</p>
         </div>

@@ -35,7 +35,7 @@ function Home(images) {
         </div>
         <div className="btn-container">
           <Button text="Contact me" />
-          <div className="social-media-btn-container">
+          {/* <div className="social-media-btn-container">
             <div className="instagram-container social-icon-container">
               <img
                 className="social-icon"
@@ -59,7 +59,7 @@ function Home(images) {
                 alt="Twitter social icon"
               />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       {/* Colored circle background highlighting */}
