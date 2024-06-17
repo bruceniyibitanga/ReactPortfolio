@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-scroll";
-
+import Form from "./Form";
 function HandleBorderRadius(isDownScroll = true, currentTopRadii, footer) {
   if (isDownScroll) {
     let calculation = currentTopRadii - currentTopRadii * 0.03;
@@ -59,36 +59,7 @@ function Footer() {
               <h2>Let's create something great, together.</h2>
               <a href="mailto:hello@xenova.com.au">hello@xenova.com.au</a>
             </div>
-            <form
-              className="footer-form"
-              name="contact"
-              method="POST"
-              data-netlify="true"
-            >
-              <input
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Name"
-                required
-              />
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Email"
-                required
-              />
-              <textarea
-                name="message"
-                id="message"
-                cols="30"
-                rows="10"
-                placeholder="Message"
-                required
-              ></textarea>
-              <button type="submit">Send Message</button>
-            </form>
+            <Form />
           </div>
           <div className="footer-link-container">
             <Link
