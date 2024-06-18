@@ -74,7 +74,7 @@ function About() {
               uncertainty, that I discovered the profound impact of support and
               the difference it can make in a person's life.
             </p>
-            <video src={GitegaVillage} autoPlay muted loop />
+            <video src={GitegaVillage} autoPlay playsInline muted loop />
             <div className="parallax-wrapper">
               <Parallax bgImage={GitegaVillageImage} />
             </div>
@@ -105,7 +105,7 @@ function About() {
         </div>
 
         <Quote
-          quote={`Web design is more than creating a site; it's about weaving a digital tapestry where every pixel tells a story, and every interface invites a journey. It's our craft to frame your vision, capturing the essence of your brand with the artistry of code.`}
+          quote={`Web design is more than creating a site; it's about weaving a digital tapestry where every pixel tells a story, and every interface invites a journey.`}
           reference="Bruce Niyibitanga"
           title="Founder, Xenova Digital"
         />

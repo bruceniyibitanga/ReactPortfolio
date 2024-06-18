@@ -47,7 +47,6 @@ function BentoGrid({
                       <p>Website / Brand Identity</p>
                     </div>
                     <div className="icon-container">
-                      <span>Explore More</span>
                       <RiArrowRightLine size="1.5rem" color="white" />
                     </div>
                   </>
@@ -76,8 +75,7 @@ function BentoGrid({
                         <p>Website / Brand Identity</p>
                       </div>
                       <div className="icon-container">
-                        <span>Explore More</span>
-                        <RiArrowRightLine size="1.5rem" color="white" />
+                        <RiArrowRightLine siz e="1.5rem" color="white" />
                       </div>
                     </>
                   ) : null}
