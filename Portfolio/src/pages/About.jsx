@@ -5,42 +5,20 @@ import ExperienceTiles from "../components/ExperienceTiles";
 import Navbar from "../components/Navbar";
 import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
-import { RiAddFill, RiCrossLine } from "@remixicon/react";
+import { RiAddFill, RiArrowDownWideLine, RiCrossLine } from "@remixicon/react";
 
 import Beach from "../assets/young-beach.jpg";
 import Profile from "../assets/profile.jpg";
 import { Parallax } from "react-parallax";
 import Quote from "../components/Quote";
-import { Link } from "react-scroll";
+import { Button, Link } from "react-scroll";
 
 function About() {
-  const [accordian, setAccordian] = useState(false);
-  const [accordian2, setAccordian2] = useState(false);
-  const accordianRef1 = useRef(null);
-  const accordianRef2 = useRef(null);
-
-  function HandleAccordianButtonClick(accordianRef) {
-    accordianRef = accordianRef.current;
-    let accordianContent =
-      accordianRef.getElementsByClassName("accordian-content")[0];
-
-    if (accordianRef === accordianRef1.current) {
-      if (accordian === false) {
-        accordianContent.style.display = "block";
-        setAccordian(true);
-      } else {
-        accordianContent.style.display = "none";
-        setAccordian(false);
-      }
-    } else if (accordianRef === accordianRef2.current) {
-      if (accordian2 === false) {
-        accordianContent.style.display = "block";
-        setAccordian2(true);
-      } else {
-        accordianContent.style.display = "none";
-        setAccordian2(false);
-      }
-    }
+  function HandleAccordianButtonClick(e) {
+    let btn = e.target;
+    let accordianContent = e.target.nextSibling;
+    btn.classList.toggle("active");
+    accordianContent.classList.toggle("active");
   }
 
   useEffect(() => {
@@ -67,7 +45,7 @@ function About() {
       observer.unobserve(quoteSection);
       document.body.style.backgroundColor = "#FCF7EF";
     };
-  }, [accordian]);
+  }, []);
   return (
     <>
       <section className="about-section-wrapper">
@@ -155,50 +133,44 @@ function About() {
                 engages your audience on a deeper level.
               </p>
               <div className="accordian-container">
-                <div
-                  ref={accordianRef1}
-                  className="accordian"
-                  onClick={HandleAccordianButtonClick.bind(this, accordianRef1)}
+                <button
+                  className="accordian-btn"
+                  onClick={HandleAccordianButtonClick}
                 >
-                  <div className="accordian-btn">
-                    <RiAddFill /> <span>Our Commitment</span>
-                  </div>
-                  <div className="accordian-content">
-                    <p>
-                      At Xenova, we're dedicated to crafting a website that
-                      reflects the highest standards of professionalism. We'll
-                      work diligently to ensure the final product is not just
-                      professional, but a benchmark of quality in the digital
-                      space.
-                    </p>
-                  </div>
+                  <RiArrowDownWideLine /> <span>Our Commitment</span>
+                </button>
+                <div className="accordian-content">
+                  <p>
+                    At Xenova, we're dedicated to crafting a website that
+                    reflects the highest standards of professionalism. We'll
+                    work diligently to ensure the final product is not just
+                    professional, but a benchmark of quality in the digital
+                    space.
+                  </p>
                 </div>
-                <div
-                  ref={accordianRef2}
-                  className="accordian"
-                  onClick={HandleAccordianButtonClick.bind(this, accordianRef2)}
+                <button
+                  className="accordian-btn"
+                  onClick={HandleAccordianButtonClick}
                 >
-                  <div className="accordian-btn">
-                    <RiAddFill /> <span>Our Promise</span>
-                  </div>
-                  <div className="accordian-content" style={{}}>
-                    <p>
-                      Craft a website that stands out for its visual elegance,
-                      user-friendliness, and robust functionality. We strive to
-                      ensure your site is responsive, accessible, and optimized
-                      for search engines, aiming to create an online presence
-                      that supports your business's growth and success.
-                    </p>
-                  </div>
+                  <RiArrowDownWideLine /> <span>Our Promise</span>
+                </button>
+                <div className="accordian-content" style={{}}>
+                  <p>
+                    We promise to craft a website that stands out for its visual
+                    elegance, user-friendliness, and robust functionality. We
+                    strive to ensure your site is responsive, accessible, and
+                    optimized for search engines, aiming to create an online
+                    presence that supports your business's growth and success.
+                  </p>
                 </div>
               </div>
               <div className="cta">
                 <p>
-                  If you're ready just press the button down below 👇🏾 and we'll
+                  If you're ready just press the button down below and we'll
                   start capturing amazing moments.
                 </p>
                 <Link className="cta-btn btn" to="contact" duration={600}>
-                  Get in touch
+                  Let's get started! 🎉
                 </Link>
               </div>
             </div>

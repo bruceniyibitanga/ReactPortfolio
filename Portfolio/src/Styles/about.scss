@@ -94,6 +94,7 @@
         align-items: flex-start;
         gap: 3rem;
         height: 100%;
+        padding-bottom: 5rem;
         @media screen and (min-width: 60em) {
             flex-direction: row;
         }
@@ -140,32 +141,49 @@
                 }
             }
             .accordian-container{
-                width: 100%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                gap: 1rem;
-                
-                .accordian{
-                    padding:  1rem;
+                gap: 0.5rem;
+                .accordian-btn{
+                    font-size: 1.2rem;
+                    padding: 1.5rem 2rem;
+                    min-width: 100%;
                     border-radius: 1rem;
-                    background-color: $secondary-green;
-                    transition: all 0.5s ease-in-out;
+                    display: flex;
+                    justify-content:flex-start;
+                    align-items: center;
+                    gap: 1rem;
+                    margin-bottom: 0;
+                    background-color: $dark-green;
+
                     &:hover{
-                        cursor: pointer;
-                        background-color: #0dd181;
+                        color: $primary-light;
                     }
-                    .accordian-btn{
-                        font-size: 1.2rem;
-                        display: flex;
-                        justify-content:flex-start;
-                        align-items: center;
-                        gap: 1rem;
+
+                    svg{
+                        rotate: 0deg;
+                        transition: rotate 0.5s ease-in-out;
                     }
-                    .accordian-content{
-                        display: none;
+                    &.active{
+                        svg{
+                            rotate: -180deg;
+                        }
+                    }
+                }
+                .accordian-content{
+                    border-radius: 1rem;
+                    background-color: $dark-green;
+                    max-height: 0;
+                    transition: max-height 0.5s ease-in-out;
+                    p{
+                        font-size: 1.5rem;
+                        color: white;
                         padding: 1rem;
-                        border-radius: 1rem;
+                    }
+                    &.active{
+                        max-height: 30rem;
+                        
                     }
                 }
             }
@@ -178,6 +196,14 @@
         justify-content: center;
         align-items: flex-start;
         gap: 1rem;
+        .cta-btn{
+            color: $primary-light;
+            background-color: $dark-green;
+
+            &:hover{
+                color: $secondary-green;
+            }
+        }
     }
 
     .experience-table-section{
