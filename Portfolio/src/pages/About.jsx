@@ -1,17 +1,11 @@
-import { React, useEffect, useState, useRef } from "react";
+import { React, useEffect } from "react";
 
-import SectionHeaders from "../components/SectionHeaders";
-import ExperienceTiles from "../components/ExperienceTiles";
-import Navbar from "../components/Navbar";
-import ContactForm from "../components/ContactForm";
-import Footer from "../components/Footer";
-import { RiAddFill, RiArrowDownWideLine, RiCrossLine } from "@remixicon/react";
+import { RiArrowDownWideLine } from "@remixicon/react";
 
-import Beach from "../assets/young-beach.jpg";
 import Profile from "../assets/profile.jpg";
 import { Parallax } from "react-parallax";
 import Quote from "../components/Quote";
-import { Button, Link } from "react-scroll";
+import { Link } from "react-scroll";
 
 function About() {
   function HandleAccordianButtonClick(e) {
@@ -167,7 +161,7 @@ function About() {
               <div className="cta">
                 <p>
                   If you're ready just press the button down below and we'll
-                  start capturing amazing moments.
+                  start creating!
                 </p>
                 <Link className="cta-btn btn" to="contact" duration={600}>
                   Let's get started! 🎉
