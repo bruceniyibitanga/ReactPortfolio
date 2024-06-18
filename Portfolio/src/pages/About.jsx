@@ -1,11 +1,15 @@
 import { React, useEffect } from "react";
-
+import { Parallax } from "react-parallax";
+import { Link } from "react-scroll";
 import { RiArrowDownWideLine } from "@remixicon/react";
 
-import Profile from "../assets/profile.jpg";
-import { Parallax } from "react-parallax";
+// COMPONENT IMPORTS
 import Quote from "../components/Quote";
-import { Link } from "react-scroll";
+
+//ASSET IMPORTS
+import Profile from "../assets/profile.jpg";
+import GitegaVillage from "../assets/videos/gitega-village.mp4";
+import GitegaVillageImage from "../assets/images/gitega-village.jpeg";
 
 function About() {
   function HandleAccordianButtonClick(e) {
@@ -70,7 +74,10 @@ function About() {
               uncertainty, that I discovered the profound impact of support and
               the difference it can make in a person's life.
             </p>
-            <img src={Profile} alt="" />
+            <video src={GitegaVillage} autoPlay muted loop />
+            <div className="parallax-wrapper">
+              <Parallax bgImage={GitegaVillageImage} />
+            </div>
             <p>
               These lessons have been the bedrock upon which Xenova was built.
               As a web development business, we're not just coding sites; we're
@@ -92,6 +99,7 @@ function About() {
               vision—crafted with care, designed with purpose, and built to
               last. By choosing Xenova, our clients are not only investing in
               their own digital future but are also contributing to a larger
+              cause to uplift and empower communities in need.
             </p>
           </div>
         </div>
