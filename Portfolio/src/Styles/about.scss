@@ -1,15 +1,256 @@
 @import 'globals.scss';
 
-.experience-section{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+.about-section-wrapper{
+    position: relative;
+    padding: 2rem;
+    .about-landing-section{
+        // height: 30vh;
+        h2{
+            font-size: 3rem;
+            font-family: ClashDisplay-Bold;
+            line-height: 2.5rem;
+            color: $dark-green;
+            @media screen and (min-width: 60em) {
+                font-size: 6rem;
+                line-height: 5.5rem;
+            }
+        }
+    }
+    .text-information-section-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 2rem;
+        gap: 2rem;
+        
+        font-size: 1.5rem;
 
-    margin-top: 1rem;
+        @media screen and (min-width:60em) {
+            font-size: 1.8rem;
+        }
 
-    @media screen and (min-width: 50em) {
-        margin-top: 3rem;
+        color: $dark-green;
+        @media screen and (min-width: 60em) {
+            flex-direction: row;
+        }
+        .left-content-sticky{
+            flex: 1;
+            .parallax-wrapper{
+                height: 50rem;
+                margin-top: 2rem;
+                .react-parallax{
+                    width: 100% !important;
+                    height: 100% !important;
+                    object-fit: cover !important;
+                    border-radius: 2rem !important;
+
+                    img{
+                        height: 100% !important;
+                        object-fit: cover;
+                        object-position: top;
+                    }
+                }
+            }
+            .highlight{
+                background-color: rgba($color: $secondary-green, $alpha: 0.6);
+                color: $secondary-purple;
+                padding: 0.2rem;
+                border-radius: 0.2rem;
+            }
+            @media screen and (min-width: 60em) {
+                position: sticky;
+                top: 3rem;
+                left: 0;
+            }
+        }
+
+        .right-content-scroll{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 2rem;
+
+            font-size: 1.5rem;
+
+             @media screen and (min-width:60em) {
+                font-size: 1.8rem;
+            }
+            
+            video{
+                object-fit: cover;
+                object-position: center;
+                width: 100%;
+                height: 30rem;
+                border-radius: 2rem;
+            }
+
+            .parallax-wrapper{
+                height: 30rem;
+                width: 100%;
+                margin-top: 2rem;
+                .react-parallax{
+                    width: 100% !important;
+                    height: 100% !important;
+                    object-fit: cover !important;
+                    border-radius: 2rem !important;
+
+                    img{
+                        height: 110% !important;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+    
+    .expectation-section{
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 3rem;
+        height: 100%;
+        padding-bottom: 5rem;
+        @media screen and (min-width: 60em) {
+            flex-direction: row;
+        }
+
+        .left-expectation-content{
+            flex: 1;
+            @media screen and (min-width: 60em){
+            }
+            .image-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                
+                img{
+                    object-fit: cover;
+                    object-position: left;
+                    border-radius: 2rem;
+                    height: 100vh;
+                }
+            }
+        }
+
+        .right-expectation-content{
+            flex: 1;
+            .text-content{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 1rem;
+                h3{
+                    font-size: 2rem;
+                    @media screen and (min-width: 60em) {
+                        font-size: 2.5rem;
+                    }
+                
+                }
+                p{
+                    font-size: 1.5rem;
+                    @media screen and (min-width:60em) {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+            .accordian-container{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 0.5rem;
+                width: 100%;
+                .accordian-btn{
+                    font-size: 1.2rem;
+                    padding: 1.5rem 2rem;
+                    border-radius: 1rem;
+                    display: flex;
+                    justify-content:flex-start;
+                    align-items: center;
+                    gap: 1rem;
+                    margin-bottom: 0;
+                    background-color: $dark-green;
+                    min-width: 100%;
+                    &:hover{
+                        color: $primary-light;
+                    }
+
+                    svg{
+                        rotate: 0deg;
+                        transition: rotate 0.5s ease-in-out;
+                    }
+                    &.active{
+                        svg{
+                            rotate: -180deg;
+                        }
+                    }
+                }
+                .accordian-content{
+                    border-radius: 1rem;
+                    background-color: $dark-green;
+                    max-height: 0;
+                    transition: max-height 0.5s ease-in-out;
+                    overflow: hidden;
+                    p{
+                        font-size: 1.5rem;
+                        color: white;
+                        padding: 1rem;
+                    }
+                    &.active{
+                        overflow: auto;
+                        max-height: 30rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .cta{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1rem;
+        .cta-btn{
+            color: $primary-light;
+            background-color: $dark-green;
+
+            &:hover{
+                color: $secondary-green;
+            }
+        }
+    }
+
+    .experience-table-section{
+        margin-top: 5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        div{
+            background-color: rgba($primary-light, 0.2);
+            backdrop-filter: blur(10px);
+            border: 0.5px solid rgba($primary-light, 0.8);
+            height: 20rem;
+            width: 20rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 1rem;
+            p{
+                text-align: center;
+                font-size: 1.5rem;
+                // color: $primary-light;
+                span{
+                    display: block;
+                }
+            }
+        }
     }
 }

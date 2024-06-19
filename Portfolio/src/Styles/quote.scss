@@ -1,0 +1,37 @@
+@import "globals.scss";
+
+.quote-section{
+        margin-top: 4rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        .quote-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            .quote{
+                font-family: ClashDisplay-Medium;
+                color: $secondary-dark;
+                font-size: 1.8rem;
+                @media screen and (min-width: 60em) {
+                    font-size: 3rem;
+                }
+                .highlight{
+                    background-color: rgba($color: $secondary-green, $alpha: 0.6);
+                    color: $secondary-dark;
+                    padding: 0.2rem;
+                    border-radius: 0.2rem;
+                }
+            }
+            .quote-reference{
+                font-size: 1rem;
+                @media screen and (min-width: 60em) {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }

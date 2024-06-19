@@ -1,0 +1,114 @@
+@import 'globals.scss';
+
+.footer {
+    // margin-top: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    background: rgba($primary-light, 0.8);
+    backdrop-filter: blur(5rem);
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    position: relative;
+    transition: all 1s ease;
+    padding: 10rem 2rem;
+
+    .footer-container{
+        // All rights reserved text
+        &:last-child{
+            text-align: center;
+            font-size: 0.8rem;
+            margin-bottom: 3rem;
+        }
+        .footer-content-container{
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            
+            @media screen and (min-width:60em){
+                flex-direction: row
+            }
+
+            .footer-text{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: left;
+                h2{
+                    font-size: 3.5rem;
+                    line-height: 3rem;
+                    @media screen and (min-width:60em) {
+                        font-size: 6rem;
+                        line-height: 4.5rem;
+                    }
+                }
+                a{
+                    font-family: ClashDisplay-Medium;
+                    font-size: 1.5rem;
+                    @media screen and (min-width:60em) {
+                        font-size: 2rem;
+                        
+                    }
+                }
+            }
+            a{
+                color: $secondary-dark;
+                font-size: 2rem;
+            }
+            form{
+                position: relative;
+                margin-top: 2rem;
+                width: 100%;
+                display: flex;
+                flex: 1;
+                gap: 1rem;
+                flex-direction: column;
+            }
+            form > input, textarea{
+            width: 100%;
+            background: none;
+            border: 1px solid $secondary-dark;
+            font-family: ClashDisplay-Light, sans-serif;
+            font-size: 1rem;
+            padding: 0.8rem 1.2rem;
+            border-radius: 0.8rem;
+            transition: all 0.3s ease-in-out;
+            &:focus{
+                outline: none;
+                border: 1px solid $secondary-green;
+            }
+        }
+            form > button{
+            width: 100%;
+            background-color: $secondary-green;
+            color: $primary-dark;
+            text-align: center;
+        }
+        }
+        .footer-link-container{
+            margin-top: 5rem;
+            margin-bottom: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            a{
+                font-family: ClashDisplay-Regular, serif;
+                font-size: 0.9rem;
+                color: $secondary-purple    ;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                &:hover{
+                    color: $secondary-green;
+                }
+            }
+        }
+    }
+}

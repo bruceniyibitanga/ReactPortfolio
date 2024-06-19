@@ -1,29 +1,32 @@
 @import 'globals.scss';
 
 .text-container{
-    color: $primary-light;
+    color: $primary-dark;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    text-align: center;
     margin-bottom: 3rem;
-    h3{
-        color: $secondary-dark;
-        text-transform: uppercase;
-        font-size: clamp(1rem,5vw, 1.8rem);
-    }
-
     h2{
-        font-size: clamp(1.2rem, 5vw, 2.5rem);
-        margin-bottom: 0.5rem;
+        font-family: ClashDisplay-Bold;
+        text-transform: uppercase;
+        font-size: clamp(1.9rem,4vw, 3.5rem);
+        line-height: 1.9rem;
+
+        @media screen and (min-width: 40em){
+            width: 50%;
+        }
     }
 
     p{
-        font-size: clamp(0.5rem, 3vw, 1rem);
+        font-family: ClashDisplay-Regular;
+        margin-top: 0.5rem;
+        font-size: clamp(1rem, 3vw, 1.5rem);
+        line-height: 1rem;
+        color: rgb(134, 134, 117);
         @media screen and (min-width: 40em){
             width: 50%;
-            
+            line-height: 1.5rem;
+            margin-top: 1rem;
         }
     }
 }

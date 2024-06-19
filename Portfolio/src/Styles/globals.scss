@@ -9,7 +9,7 @@
 ::before,
 ::after {
     box-sizing: border-box;
-    font-family: poppins, sans-serif;
+    font-family: ClashDisplay-Regular, sans-serif;
 }
 
 /**
@@ -53,6 +53,9 @@ html {
     /* 5 */
     word-break: break-word;
     /* 6 */
+
+    overflow-x: hidden;
+    color: #070035;
 }
 
 /* Sections
@@ -64,7 +67,8 @@ html {
 
 body {
     margin: 0;
-    background-color: #10101A;
+    background-color: #FCF7EF;
+    transition: all 0.8s ease-in-out;
 }
 
 /**
@@ -91,8 +95,9 @@ dl dl,
 dl ol,
 dl ul,
 ol dl,
-ul dl {
+ul dl, ul {
     margin: 0;
+    padding: 0;
 }
 
 /**
@@ -104,6 +109,15 @@ ol ul,
 ul ol,
 ul ul {
     margin: 0;
+}
+
+/*
+* Remove list and anchor tag decordation
+*/
+
+li, a{
+    list-style: none;
+    text-decoration: none !important;
 }
 
 /**
@@ -383,6 +397,8 @@ textarea {
     /* 2 */
     resize: vertical;
     /* 3 */
+    font-family: inherit;
+    font-size: inherit;
 
 }
 
@@ -622,7 +638,7 @@ input {
 }
 
 .wrapper {
-    padding: 0 3em;
+    padding: 0 1.5em;
     max-width: 77.5em;
     margin: 0 auto;
     @media screen and (min-width:50em) {
@@ -638,11 +654,32 @@ input {
     color: black;
 }
 
-// Global Colors
-$primary-dark: blue;
-$primary-light: white;
-$secondary-dark: #6380F8;
-$secondary-light: #E1E8F0;
-$accent: pink;
+// LENIS SCROLL 
+html.lenis, html.lenis body {
+  height: auto;
+}
 
-$primary-text: #262626
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+// Global Colors
+$primary-dark: #272727;
+$primary-light: #FFFFFF;
+$dark-green: #0F1D07;
+$secondary-dark: #070035;
+$secondary-green: #10E597;
+$secondary-purple: #6380F8;
+$secondary-beige: #FCF7EF;

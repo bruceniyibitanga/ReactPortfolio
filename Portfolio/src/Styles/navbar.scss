@@ -1,135 +1,59 @@
 @import 'globals.scss';
-
-@media screen and (max-width: 36em){
-
-    .navbar{
-        position: fixed;
-        width: 80%;
-        top: 0;
-        left: 50%;
-        transform: translate(-50%, 50%);
-        -webkit-backdrop-filter: blur(104px);
-        backdrop-filter: blur(104px);
-        background: rgba(42, 43, 56, 0.5);
-        padding: 1.5rem 3rem;
-        border-radius: 1rem;
-        z-index: 9999;
-    
-        .navbar-container{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .navbar-logo{
-            img{
-                width: 2rem;
-                transition: all 0.3s ease-in-out;
-                &:hover{
-                    transform: scale(1.05);
-                }
-            }
-        }
-    
-        .nav-menu{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 1rem;
-            align-items: center;
-            border-radius: 1rem;
-            .nav-item{
-                .nav-links{
-                    color: $primary-light;
-                    font-size: 1.5rem;
-                    &:hover{
-                        color: pink;
-                        cursor: pointer;
-                    }
-                }
-            }
-
-            &.show{
-                position: absolute;
-                display: flex;
-                justify-content: center;
-                align-items: flex-end;
-                top: 0;
-                right: 0;
-                width: 100%;
-                height: 90vh;
-                -webkit-backdrop-filter: blur(104px);
-                backdrop-filter: blur(104px);
-                background: rgba(42, 43, 56, 1);
-                z-index: -1;
-                padding: 3rem;
-                margin: 0;
-            }
-
-            &.hide{
-                display: none;
-            }
-        }
-
-        .menu{
-            .menu-icon{
-                color: $primary-light;
-                font-size: 1.9rem;
+.navbar{
+    width: 100vw;
+    // padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 90%;
+    left: 0;
+    z-index: 99999999;
+    .navbar-logo{
+        display: none;
+        img{
+            width: 2rem;
+            transition: all 0.3s ease-in-out;
+            &:hover{
+                transform: scale(1.05);
             }
         }
     }
-}
-
-@media screen and (min-width: 36em){
-
-    .navbar{
-        position: fixed;
-        width: 70%;
-        top: 0;
-        left: 50%;
-        transform: translate(-50%, 50%);
-        -webkit-backdrop-filter: blur(104px);
+    .nav-menu{
+        display: flex;
+        gap: 0.2rem;
+        background: rgba(white, 0.8);
         backdrop-filter: blur(104px);
-        background: rgba(42, 43, 56, 0.7);
-        padding: 0 3rem;
-        border-radius: 0.6rem;
-        z-index: 9999;
-    
-        .navbar-container{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .navbar-logo{
-            img{
-                width: 2rem;
-                transition: all 0.3s ease-in-out;
+        border-radius: 2.5rem;
+        padding: 0.2rem;
+        .nav-item{
+            padding: 0.5rem 0.8rem;
+            transition: all 0.5s ease-in-out;
+            font-size: 0.9rem;
+            
+            .active{
+                background-color: rgba($color: $primary-dark, $alpha: 1);
+                color: $secondary-green !important;
+                border-radius: 2.5rem;
+                padding: 0.5rem 1rem;
+                cursor: pointer;
+            }
+
+            a{
+                color: $primary-dark;
+                transition: all 0.5s ease-in-out;
                 &:hover{
-                    transform: scale(1.05);
+                    color: $secondary-green;
+                    cursor: pointer;
                 }
             }
-        }
-    
-        .nav-menu{
-            display: flex;
-            justify-content: space-evenly;
-            gap: 1rem;
-            align-items: center;
-
-            .nav-item{
-                .nav-links{
-                    color: $primary-light;
-                    &:hover{
-                        color: pink;
-                    }
-
-                    &.active{
-                        color: pink;
-                    }
-                }
-            }
-        }
-        .menu {
-            display: none;
         }
     }
+
+    @media screen and (min-width: 40em) {
+        top: 5%;
+    }
 }
+
+.burger-menu{
+    display: none;
+}   
