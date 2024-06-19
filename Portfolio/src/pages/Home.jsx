@@ -26,15 +26,17 @@ function Home(images) {
       <div className="landing-content-container">
         <div className="text-container">
           <h1>
-            Hello, I'm Bruce, a passionate software developer in Miles, West QLD
+            Greetings from West QLD — I'm Bruce, Your Dedicated Freelance
+            Software Developer
           </h1>
           <p>
-            I care a lot about using design for positive impact. and enjoy
-            creating user-centric, delightful, and human experiences.
+            With a passion for design that drives social good, I'm dedicated to
+            creating software experiences that are not only user-friendly but
+            also enrich lives and empower individuals.
           </p>
         </div>
         <div className="btn-container">
-          <Button text="Contact me" />
+          <Button text="You're hired! 😎" />
           {/* <div className="social-media-btn-container">
             <div className="instagram-container social-icon-container">
               <img
