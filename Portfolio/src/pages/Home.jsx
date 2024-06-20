@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Button from "../components/Button";
-import Instagram from "../assets/instagram.svg";
-import Linkedin from "../assets/linkedin.svg";
-import Twitter from "../assets/twitter.svg";
+import { Link } from "react-scroll";
 
 function Home(images) {
   const [imageIndex, setImageIndex] = useState(0);
@@ -36,7 +33,9 @@ function Home(images) {
           </p>
         </div>
         <div className="btn-container">
-          <Button text="You're hired! 😎" />
+          <Link to="contact" smooth={true} duration={600} className="btn">
+            You're hired! 😎
+          </Link>
           {/* <div className="social-media-btn-container">
             <div className="instagram-container social-icon-container">
               <img
