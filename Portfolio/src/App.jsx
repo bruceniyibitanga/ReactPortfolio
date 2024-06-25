@@ -1,4 +1,5 @@
 import { Element } from "react-scroll";
+import { useState } from "react";
 import ReactLenis from "lenis/react";
 
 import "./Styles/globals.scss";
@@ -15,6 +16,7 @@ import "./Styles/bentogrid.scss";
 import "./Styles/gridcontent.scss";
 import "./Styles/parallaxbanner.scss";
 import "./Styles/quote.scss";
+import "./Styles/loadingscreen.scss";
 
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
@@ -45,6 +47,7 @@ import SamsWarehouseVideo from "./assets/videos/sams-warehouse.mp4";
 import About from "./pages/About";
 import GridContainer from "./components/GridContent";
 import { useEffect } from "react";
+import LoadingScreen from "./components/LoadingScreen";
 
 const gridItems = [
   {
@@ -74,32 +77,22 @@ const gridItems = [
 ];
 
 function App() {
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
-    const aboutSection = document.getElementsByClassName(
-      "grid-text-content-container"
-    );
-    const options = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.1,
-    };
+    window.addEventListener("load", () => {
+      setLoading(false);
+    });
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        // if (entry.isIntersecting) {
-        //   console.log("Intersecting");
-        //   document.body.style.backgroundColor = "#FCF3F0";
-        // } else {
-        //   document.body.style.backgroundColor = "#FCF7EF";
-        // }
+    return () => {
+      window.removeEventListener("load", () => {
+        setLoading(true);
       });
-    }, options);
-
-    // observer.observe(aboutSection[0]);
+    };
   }, []);
   return (
     <>
       <ReactLenis root>
+        {loading && <LoadingScreen />}
         <Navbar />
 
         <Element name="home">

@@ -139,7 +139,7 @@ function About() {
                   className="accordian-btn"
                   onClick={HandleAccordianButtonClick}
                 >
-                  <RiArrowDownWideLine /> <span>Our Commitment</span>
+                  <RiArrowDownWideLine /> Our Commitment
                 </button>
                 <div className="accordian-content">
                   <p>
@@ -154,7 +154,7 @@ function About() {
                   className="accordian-btn"
                   onClick={HandleAccordianButtonClick}
                 >
-                  <RiArrowDownWideLine /> <span>Our Promise</span>
+                  <RiArrowDownWideLine /> Our Promise
                 </button>
                 <div className="accordian-content" style={{}}>
                   <p>
