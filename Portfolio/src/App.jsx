@@ -1,7 +1,8 @@
+import { useState, useEffect } from "react";
 import { Element } from "react-scroll";
-import { useState } from "react";
 import ReactLenis from "lenis/react";
 
+import "./Styles/loadingscreen.scss";
 import "./Styles/globals.scss";
 import "./Styles/clash-display.scss";
 import "./Styles/navbar.scss";
@@ -16,14 +17,13 @@ import "./Styles/bentogrid.scss";
 import "./Styles/gridcontent.scss";
 import "./Styles/parallaxbanner.scss";
 import "./Styles/quote.scss";
-import "./Styles/loadingscreen.scss";
 
+import LoadingScreen from "./components/LoadingScreen";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import ContactForm from "./components/ContactForm";
+import About from "./pages/About";
 import Footer from "./components/Footer";
 import BentoGrid from "./components/BentoGrid";
-import GridContent from "./components/GridContent";
 import FullPageCalloutBanner from "./components/ParallaxBanner";
 // LANDING PAGE SLIDE SHOW IMAGES
 const image1 = "/img/profile.webp";
@@ -36,18 +36,7 @@ let images = [
     url: image1,
     alt: "Image of Bruce sitting on an orange chair in a green forest",
   },
-  { url: image2, alt: "Image of Bruce hiking in the mountains" },
-  { url: image3, alt: "Image of Bruce in a tree with a friend" },
-  { url: image4, alt: "Image of Bruce in road taking a photo" },
 ];
-
-// VIDEO IMPORTS
-import GauteauxVideo from "./assets/videos/gateaux.mp4";
-import SamsWarehouseVideo from "./assets/videos/sams-warehouse.mp4";
-import About from "./pages/About";
-import GridContainer from "./components/GridContent";
-import { useEffect } from "react";
-import LoadingScreen from "./components/LoadingScreen";
 
 const gridItems = [
   {
