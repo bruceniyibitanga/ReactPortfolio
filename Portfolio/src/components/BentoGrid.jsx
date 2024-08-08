@@ -3,6 +3,7 @@ import SectionHeaders from "../components/SectionHeaders";
 import { Link } from "react-router-dom";
 import { Parallax } from "react-parallax";
 import { RiArrowRightLine } from "@remixicon/react";
+import { Helmet } from "react-helmet-async";
 
 function BentoGrid({
   isCallOut = false,
@@ -27,6 +28,13 @@ function BentoGrid({
 
     return (
       <>
+        {/* <Helmet>
+          <title>Recent Projects | Xenova Digital</title>
+          <meta
+            name="description"
+            content="Xenova Digital is a web development business that crafts software that empower and uplift. Based in west Queensland, and Brisbane we are leading the way in digital excellence. Check out our recent projects here."
+          />
+        </Helmet> */}
         {removeLinkWrapper ? (
           <Parallax
             bgImage={details.src}

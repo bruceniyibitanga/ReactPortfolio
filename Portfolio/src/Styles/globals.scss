@@ -649,6 +649,11 @@ input {
     }
 }
 
+body.locked{
+    height: 100vh;
+    overflow: hidden !important;
+}
+
 .link {
     text-decoration: none;
     color: black;

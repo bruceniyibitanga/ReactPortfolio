@@ -2,6 +2,7 @@ import { React, useEffect } from "react";
 import { Parallax } from "react-parallax";
 import { Link } from "react-scroll";
 import { RiArrowDownWideLine } from "@remixicon/react";
+import { Helmet } from "react-helmet-async";
 
 // COMPONENT IMPORTS
 import Quote from "../components/Quote";
@@ -46,6 +47,13 @@ function About() {
   }, []);
   return (
     <>
+      {/* <Helmet>
+        <title>About | Xenova Digital</title>
+        <meta
+          name="description"
+          content="Xenova Digital is a web development business that crafts software that empower and uplift. Based in west Queensland, and Brisbane we are leading the way in digital excellence."
+        />
+      </Helmet> */}
       <section className="about-section-wrapper">
         <div className="about-landing-section">
           <h2>Digital Excellence from Resilient Roots </h2>
@@ -59,7 +67,7 @@ function About() {
               faith that carried us through, a testament to resilience and hope.
             </p>
             <div className="parallax-wrapper">
-              <Parallax bgImage="/img/forest-xplore.jpg" />
+              <Parallax lazy={true} bgImage="/img/forest-xplore.jpg" />
             </div>
           </div>
           <div className="right-content-scroll">
@@ -76,7 +84,7 @@ function About() {
             </p>
             <video src={GitegaVillage} autoPlay playsInline muted loop />
             <div className="parallax-wrapper">
-              <Parallax bgImage={GitegaVillageImage} />
+              <Parallax lazy={true} bgImage={GitegaVillageImage} />
             </div>
             <p>
               These lessons have been the bedrock upon which Xenova was built.
@@ -113,7 +121,7 @@ function About() {
         <div className="expectation-section">
           <div className="left-expectation-content">
             <div className="image-container">
-              <img src="/img/botani-mega-iphone.png" alt="" />
+              <img src="/img/botani-mega-iphone-min.png" alt="" />
             </div>
           </div>
           <div className="right-expectation-content">
@@ -200,7 +208,7 @@ function About() {
       </section>
 
       {/* <ContactForm /> */}
-      {/* <Foot er /> */}
+      {/* <Footer /> */}
     </>
   );
 }

@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { Element } from "react-scroll";
 import ReactLenis from "lenis/react";
+import { Helmet } from "react-helmet-async";
 
 import "./Styles/loadingscreen.scss";
 import "./Styles/globals.scss";
@@ -68,39 +69,48 @@ const gridItems = [
 function App() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
+    document.body.classList.add("locked");
     window.addEventListener("load", () => {
       setLoading(false);
     });
 
     return () => {
-      window.removeEventListener("load", () => {
-        setLoading(true);
-      });
+      document.body.classList.remove("locked");
     };
   }, []);
   return (
     <>
-      <ReactLenis root>
-        {loading && <LoadingScreen />}
-        <Navbar />
+      {/* <Helmet>
+        <title>
+          Brruce Niyibitanga: Software Developer from Brisbane & West QLD
+        </title>
+        <meta
+          name="description"
+          content="Software Developer from West Queensland & Brisbane"
+        />
+      </Helmet> */}
+      <Suspense fallback={<LoadingScreen />}>
+        <ReactLenis root>
+          <Navbar />
 
-        <Element name="home">
-          <Home images={images} />
-        </Element>
-        <Element name="about">
-          <About />
-        </Element>
+          <Element name="home">
+            <Home images={images} />
+          </Element>
+          <Element name="about">
+            <About />
+          </Element>
 
-        <FullPageCalloutBanner />
+          <FullPageCalloutBanner />
 
-        <Element name="projects">
-          <BentoGrid x={2} y={2} gridItems={gridItems} />
-        </Element>
+          <Element name="projects">
+            <BentoGrid x={2} y={2} gridItems={gridItems} />
+          </Element>
 
-        <Element name="contact">
-          <Footer />
-        </Element>
-      </ReactLenis>
+          <Element name="contact">
+            <Footer />
+          </Element>
+        </ReactLenis>
+      </Suspense>
     </>
   );
 }
