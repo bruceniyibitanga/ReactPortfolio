@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 
+import Instagram from "../assets/instagram.svg";
+import Linkedin from "../assets/linkedin.svg";
+import Twitter from "../assets/twitter.svg";
+
 function Home(images) {
   const [imageIndex, setImageIndex] = useState(0);
   useEffect(() => {
@@ -18,7 +22,7 @@ function Home(images) {
   return (
     <div className="landing-container image-container">
       <div className="image-container">
-        <img src={images.images[0].url} />
+        <img src={images.images[0].url} style={{ objectPosition: top }} />
       </div>
       <div className="landing-content-container">
         <div className="text-container">

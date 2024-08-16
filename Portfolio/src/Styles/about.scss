@@ -4,7 +4,6 @@
     position: relative;
     padding: 2rem;
     .about-landing-section{
-        // height: 30vh;
         h2{
             font-size: 3rem;
             font-family: ClashDisplay-Bold;
@@ -36,6 +35,13 @@
         }
         .left-content-sticky{
             flex: 1;
+            @media screen and (min-width: 60em) {
+                position: sticky;
+                position: -webkit-sticky;
+                top: 0;
+                left: 0;
+            }
+
             .parallax-wrapper{
                 height: 50rem;
                 margin-top: 2rem;
@@ -57,11 +63,6 @@
                 color: $secondary-purple;
                 padding: 0.2rem;
                 border-radius: 0.2rem;
-            }
-            @media screen and (min-width: 60em) {
-                position: sticky;
-                top: 3rem;
-                left: 0;
             }
         }
 

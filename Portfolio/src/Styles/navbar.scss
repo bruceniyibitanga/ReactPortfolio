@@ -1,13 +1,18 @@
 @import 'globals.scss';
 .navbar{
-    width: 100vw;
+    position: fixed;
+    width: 100%;
     // padding: 1.5rem 3rem;
     display: flex;
     justify-content: center;
-    position: sticky;
-    top: 90%;
+    bottom: 5%;
     left: 0;
     z-index: 99999999;
+    @media screen and (min-width: 40em) {
+        bottom: auto;
+        top: 5%;
+    }
+
     .navbar-logo{
         display: none;
         img{
@@ -47,10 +52,6 @@
                 }
             }
         }
-    }
-
-    @media screen and (min-width: 40em) {
-        top: 5%;
     }
 }
 

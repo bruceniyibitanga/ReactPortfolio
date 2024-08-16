@@ -1,4 +1,4 @@
-import { useState, useEffect, Suspense } from "react";
+import { useState, useEffect, Suspense, lazy } from "react";
 import { Element } from "react-scroll";
 import ReactLenis from "lenis/react";
 import { Helmet } from "react-helmet-async";
@@ -21,20 +21,18 @@ import "./Styles/quote.scss";
 
 import LoadingScreen from "./components/LoadingScreen";
 import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Footer from "./components/Footer";
-import BentoGrid from "./components/BentoGrid";
-import FullPageCalloutBanner from "./components/ParallaxBanner";
+const Home = lazy(() => import("./pages/Home"));
+const About = lazy(() => import("./pages/About"));
+const Footer = lazy(() => import("./components/Footer"));
+const BentoGrid = lazy(() => import("./components/BentoGrid"));
+const FullPageCalloutBanner = lazy(() => import("./components/ParallaxBanner"));
 // LANDING PAGE SLIDE SHOW IMAGES
-const image1 = "/img/profile.webp";
-const image2 = "/img/wilson-prom2.webp";
-const image3 = "/img/garden.webp";
-const image4 = "/img/photograph.webp";
+const landingImage1 = "/img/profile.webp";
+const landingImage2 = "/img/forest-xplore.jpg";
 
 let images = [
   {
-    url: image1,
+    url: landingImage1,
     alt: "Image of Bruce sitting on an orange chair in a green forest",
   },
 ];
@@ -89,8 +87,8 @@ function App() {
           content="Software Developer from West Queensland & Brisbane"
         />
       </Helmet> */}
-      <Suspense fallback={<LoadingScreen />}>
-        <ReactLenis root>
+      <ReactLenis root>
+        <Suspense fallback={<LoadingScreen />}>
           <Navbar />
 
           <Element name="home">
@@ -109,8 +107,8 @@ function App() {
           <Element name="contact">
             <Footer />
           </Element>
-        </ReactLenis>
-      </Suspense>
+        </Suspense>
+      </ReactLenis>
     </>
   );
 }
