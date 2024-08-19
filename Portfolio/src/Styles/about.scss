@@ -1,7 +1,6 @@
 @import 'globals.scss';
 
 .about-section-wrapper{
-    position: relative;
     padding: 2rem;
     .about-landing-section{
         h2{
@@ -16,40 +15,38 @@
         }
     }
     .text-information-section-container{
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: flex-start;
         margin-top: 2rem;
         gap: 2rem;
-        
+
+        color: $dark-green;
         font-size: 1.5rem;
 
         @media screen and (min-width:60em) {
             font-size: 1.8rem;
-        }
-
-        color: $dark-green;
-        @media screen and (min-width: 60em) {
             flex-direction: row;
         }
+
         .left-content-sticky{
             flex: 1;
+            align-self: flex-start;
             @media screen and (min-width: 60em) {
                 position: sticky;
                 position: -webkit-sticky;
-                top: 0;
-                left: 0;
+                top: 0rem;
             }
 
             .parallax-wrapper{
                 height: 50rem;
                 margin-top: 2rem;
                 .react-parallax{
-                    width: 100% !important;
-                    height: 100% !important;
-                    object-fit: cover !important;
-                    border-radius: 2rem !important;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 2rem;
 
                     img{
                         height: 100% !important;
@@ -122,20 +119,27 @@
 
         .left-expectation-content{
             flex: 1;
-            @media screen and (min-width: 60em){
-            }
+            align-self: stretch;
             .image-container{
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                height: 100%;
-                
-                img{
-                    object-fit: cover;
-                    object-position: left;
-                    border-radius: 2rem;
-                    height: 100vh;
+                height: 60vh;
+                @media screen and (min-width: 60em) {
+                    height: 100%;
                 }
+                .react-parallax{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 2rem;
+
+                    img{
+                        height: 100% !important;
+                        object-fit: cover;
+                        object-position: left;
+                    }
+                }
+                
             }
         }
 
@@ -152,7 +156,6 @@
                     @media screen and (min-width: 60em) {
                         font-size: 2.5rem;
                     }
-                
                 }
                 p{
                     font-size: 1.5rem;

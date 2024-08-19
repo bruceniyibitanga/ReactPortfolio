@@ -121,7 +121,7 @@ function About() {
         <div className="expectation-section">
           <div className="left-expectation-content">
             <div className="image-container">
-              <img src="/img/botani-mega-iphone-min.png" alt="" />
+              <Parallax lazy={true} bgImage="/img/botani-mega-iphone-min.png" />
             </div>
           </div>
           <div className="right-expectation-content">

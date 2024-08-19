@@ -43,11 +43,14 @@
 
         .text-container {
             text-align: left;
+            display: flex;
+            flex-direction: column;
             h1 {
                 font-family: ClashDisplay-Regular, sans-serif;
                 color: $primary-light;
                 font-size: 2rem;
                 line-height: 1.8rem;
+                margin-top: 0.5rem;
 
                 @media screen and (min-width: 70em){
                     font-family: ClashDisplay-Medium, sans-serif;

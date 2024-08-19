@@ -26,10 +26,8 @@ function Home(images) {
       </div>
       <div className="landing-content-container">
         <div className="text-container">
-          <h1>
-            Greetings from West QLD — I'm Bruce, Your Dedicated Freelance
-            Software Developer
-          </h1>
+          {/* <p>HELLO THERE!</p> */}
+          <h1>I'm Bruce. I turn ideas into digital masterpieces.</h1>
           <p>
             With a passion for design that drives social good, I'm dedicated to
             creating software experiences that are not only user-friendly but
