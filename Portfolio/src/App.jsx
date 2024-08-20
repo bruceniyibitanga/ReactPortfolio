@@ -96,9 +96,8 @@ function App() {
           </Element>
           <Element name="about">
             <About />
+            <FullPageCalloutBanner />
           </Element>
-
-          <FullPageCalloutBanner />
 
           <Element name="projects">
             <BentoGrid x={2} y={2} gridItems={gridItems} />

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 
 import Instagram from "../assets/instagram.svg";
 import Linkedin from "../assets/linkedin.svg";
@@ -22,12 +22,12 @@ function Home(images) {
   return (
     <div className="landing-container image-container">
       <div className="image-container">
-        <img src={images.images[0].url} style={{ objectPosition: top }} />
+        <img src="/img/wsuit.JPEG" style={{ objectPosition: top }} />
       </div>
       <div className="landing-content-container">
         <div className="text-container">
-          {/* <p>HELLO THERE!</p> */}
-          <h1>I'm Bruce. I turn ideas into digital masterpieces.</h1>
+          <p>HELLO THERE!</p>
+          <h1>Nice to meet you! I'm Bruce Niyibtanga</h1>
           <p>
             With a passion for design that drives social good, I'm dedicated to
             creating software experiences that are not only user-friendly but
@@ -38,31 +38,38 @@ function Home(images) {
           <Link to="contact" smooth={true} duration={600} className="btn">
             You're hired! 😎
           </Link>
-          {/* <div className="social-media-btn-container">
-            <div className="instagram-container social-icon-container">
-              <img
-                className="social-icon"
-                src={Instagram}
-                alt="Instagram social icon"
-              />
-            </div>
-
-            <div className="linkedin-container social-icon-container">
-              <img
-                className="social-icon"
-                src={Linkedin}
-                alt="Linkedin social icon"
-              />
-            </div>
-
-            <div className="twitter-container social-icon-container">
-              <img
-                className="social-icon"
-                src={Twitter}
-                alt="Twitter social icon"
-              />
-            </div>
-          </div> */}
+          <div className="social-media-btn-container">
+            <Link to="https://www.instagram.com/xenovadigital/" target="_blank">
+              <div className="instagram-container social-icon-container">
+                <img
+                  className="social-icon"
+                  src={Instagram}
+                  alt="Instagram social icon"
+                />
+              </div>
+            </Link>
+            <Link
+              to="https://www.linkedin.com/in/bruceniyibitanga/"
+              target="_blank"
+            >
+              <div className="linkedin-container social-icon-container">
+                <img
+                  className="social-icon"
+                  src={Linkedin}
+                  alt="Linkedin social icon"
+                />
+              </div>
+            </Link>
+            {/* <Link to="" target="">
+              <div className="twitter-container social-icon-container">
+                <img
+                  className="social-icon"
+                  src={Twitter}
+                  alt="Twitter social icon"
+                />
+              </div>
+            </Link> */}
+          </div>
         </div>
       </div>
       {/* Colored circle background highlighting */}

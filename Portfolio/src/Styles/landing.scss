@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 .landing-container {
-    height: 100vh;
+    height: 100dvh;
     margin: 2rem;
     position: relative;
     
@@ -15,6 +15,9 @@
             object-fit: cover;
             object-position: center;
             border-radius: 1rem;
+            @media screen and (min-width: 60em){
+                object-position: top 30% right 0;
+            }
         }
     }
 
@@ -75,13 +78,26 @@
 
         .btn-container {
             display: flex;
+            flex-direction: column;
             justify-content: flex-start;
-            align-items: center;
+            align-items: flex-start;
+            width: fit-content;
             gap: 1rem;
+
+            @media screen and (min-width: 60em){
+                align-items: center;
+                flex-direction: row;
+            }
 
             .social-media-btn-container{
                 display: flex;
+                align-items: center;
+                width: 100%;
                 gap: 0.8rem;
+
+                @media screen and (min-width: 60em){
+                width: fit-content;
+            }
 
                 .social-icon-container{
                     background-color: $secondary-beige;

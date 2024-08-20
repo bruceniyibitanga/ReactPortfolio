@@ -18,7 +18,7 @@ function Navbar() {
             spy={true}
             smooth={true}
             duration={600}
-            offset={-70}
+            offset={-50}
           >
             Home
           </Link>
@@ -30,7 +30,7 @@ function Navbar() {
             spy={true}
             smooth={true}
             duration={600}
-            offset={-20}
+            offset={-30}
           >
             About
           </Link>

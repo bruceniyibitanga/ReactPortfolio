@@ -11,6 +11,7 @@ import Quote from "../components/Quote";
 import Profile from "../assets/profile.jpg";
 import GitegaVillage from "../assets/videos/gitega-village.mp4";
 import GitegaVillageImage from "../assets/images/gitega-village.jpeg";
+import BabyPhoto from "../assets/images/LKBaby.jpg";
 
 function About() {
   function HandleAccordianButtonClick(e) {
@@ -67,7 +68,7 @@ function About() {
               faith that carried us through, a testament to resilience and hope.
             </p>
             <div className="parallax-wrapper">
-              <Parallax lazy={true} bgImage="/img/forest-xplore.jpg" />
+              <Parallax lazy={true} bgImage={BabyPhoto} />
             </div>
           </div>
           <div className="right-content-scroll">
